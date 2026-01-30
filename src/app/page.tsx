@@ -9,6 +9,7 @@ const nav = [
   { label: "Features", href: "#features" },
   { label: "Screenshots", href: "#screens" },
   { label: "Glow stories", href: "#glow" },
+  { label: "Blog", href: "#blog" },
   { label: "FAQ", href: "#faq" },
   { label: "Download", href: "#download" },
 ];
@@ -84,6 +85,29 @@ const testimonials = [
       "The under‑$30 swaps are chef’s kiss. I’ve saved money and my skin loves me.",
     name: "Priya, London",
     rating: 4,
+  },
+];
+
+const blogPosts = [
+  {
+    title: "Why Your Moisturizer Has More Ingredients Than Dinner | Rico AI",
+    link: "https://www.ricoai.app/blogs/holisticzee-blog/why-your-moisturizer-has-more-ingredients-than-dinner-rico-ai",
+    summary:
+      "Skincare labels read like processed food. Learn why brands add extras and how to spot clean, effective formulas fast.",
+  },
+  {
+    title:
+      "The Hidden Truth About Your Skincare Ingredients: Why Less Really Is More",
+    link: "https://www.ricoai.app/blogs/holisticzee-blog/the-hidden-truth-about-your-skincare-ingredients-why-less-really-is-more",
+    summary:
+      "A holistic esthetician breaks down why minimal, clean formulations outperform overstuffed formulas.",
+  },
+  {
+    title:
+      "Ingredient Breakdown: The Truth About Niacinamide - Why This Vitamin B3 Powerhouse Works for Every Skin Type",
+    link: "https://www.ricoai.app/blogs/holisticzee-blog/ingredient-breakdown-the-truth-about-niacinamide-why-this-vitamin-b3-powerhouse-works-for-every-skin-type",
+    summary:
+      "Why niacinamide is a universal skincare staple and how to choose the right formula.",
   },
 ];
 
@@ -209,7 +233,7 @@ export default function Home() {
         {/* How it works */}
         <section
           id="how"
-          className="mt-16 rounded-[36px] bg-gradient-to-br from-[#EAF4EE] via-[#F7F3E9] to-[#F6E8E0] px-6 py-10 text-[#2D4A3A] shadow-[0_30px_120px_-90px_rgba(45,74,58,0.45)] sm:px-8 sm:py-12"
+          className="mt-16 rounded-[36px] bg-gradient-to-br from-[#EAF4EE] via-[#F3E9FF] to-[#F6E8E0] px-6 py-10 text-[#2D4A3A] shadow-[0_30px_120px_-90px_rgba(45,74,58,0.45)] sm:px-8 sm:py-12"
         >
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
@@ -323,6 +347,33 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Blog */}
+        <section id="blog" className="mt-16">
+          <div className="flex flex-col gap-2">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
+              From the Rico AI blog
+            </p>
+            <h2 className="text-3xl font-semibold">Education, inspiration, and glow tips.</h2>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {blogPosts.map((post) => (
+              <a
+                key={post.link}
+                href={post.link}
+                className="rounded-[28px] border border-white/80 bg-white/95 p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p className="text-sm font-semibold text-[#2D4A3A]">{post.title}</p>
+                <p className="mt-3 text-sm text-[#2D4A3A]/70">{post.summary}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#2D4A3A]">
+                  Read article →
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+
         {/* Email capture */}
         <section className="mt-16 rounded-[32px] border border-white/80 bg-white/95 px-6 py-10 shadow-[0_20px_80px_-60px_rgba(156,175,136,0.45)] sm:px-8">
           <div className="grid gap-6 md:grid-cols-[1.2fr_1fr] md:items-center">
@@ -372,7 +423,7 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section id="download" className="mt-16 rounded-[36px] bg-gradient-to-br from-[#EAF4EE] via-[#F7F3E9] to-[#F6E8E0] px-6 py-10 text-center shadow-[0_30px_120px_-80px_rgba(156,175,136,0.5)] sm:px-8">
+        <section id="download" className="mt-16 rounded-[36px] bg-gradient-to-br from-[#EAF4EE] via-[#F3E9FF] to-[#F6E8E0] px-6 py-10 text-center shadow-[0_30px_120px_-80px_rgba(156,175,136,0.5)] sm:px-8">
           <h2 className="text-3xl font-semibold">Ready for your glow‑up?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-[#2D4A3A]/75">
             Your bathroom cabinet has products working against your skin right now.
@@ -400,7 +451,13 @@ export default function Home() {
             <Image src="/images/ricoai-logo-primary.png" alt="Rico AI" width={24} height={24} />
             <span>Rico AI</span>
           </div>
-          <p>© {new Date().getFullYear()} Rico AI. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-4">
+            <a href="#" className="hover:text-[#2D4A3A]">Instagram</a>
+            <a href="#" className="hover:text-[#2D4A3A]">YouTube</a>
+            <a href="#" className="hover:text-[#2D4A3A]">TikTok</a>
+            <a href="#" className="hover:text-[#2D4A3A]">Pinterest</a>
+          </div>
+          <p>Rico AI made with love 💜</p>
         </footer>
       </main>
     </div>
