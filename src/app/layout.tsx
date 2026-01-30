@@ -40,8 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>{children}
+    <html lang="en" className="scroll-smooth">
+      <body className={`${geistSans.variable} antialiased`}>
+        {children}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
