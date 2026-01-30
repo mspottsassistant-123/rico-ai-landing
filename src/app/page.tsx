@@ -439,7 +439,7 @@ export default function Home() {
               href={appStoreUrl}
               className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
-              Start My Glow Transformation
+I Want Glowy Skin
             </a>
           </div>
         </section>
