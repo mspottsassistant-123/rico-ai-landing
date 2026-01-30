@@ -452,9 +452,9 @@ export default function Home() {
             <span>Rico AI</span>
           </div>
           <div className="flex flex-wrap items-center gap-4">
-            <a href="#" className="hover:text-[#2D4A3A]">Instagram</a>
-            <a href="#" className="hover:text-[#2D4A3A]">YouTube</a>
-            <a href="#" className="hover:text-[#2D4A3A]">TikTok</a>
+            <a href="https://www.instagram.com/holisticzee/" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.youtube.com/@HolisticZee" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://www.tiktok.com/@_holisticzee" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">TikTok</a>
             <a href="#" className="hover:text-[#2D4A3A]">Pinterest</a>
           </div>
           <p>Rico AI made with love 💜</p>
