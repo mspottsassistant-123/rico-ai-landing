@@ -46,3 +46,29 @@ body {
   backdrop-filter: blur(14px);
   box-shadow: 0 14px 40px -24px rgba(59, 25, 133, 0.4);
 }
+
+@keyframes neon-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 0.9;
+    filter: blur(6px);
+  }
+}
+
+.neon-ring {
+  position: relative;
+  isolation: isolate;
+}
+
+.neon-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  background: linear-gradient(120deg, rgba(233,215,255,0.9), rgba(248,201,215,0.9), rgba(207,231,213,0.9));
+  z-index: -1;
+  animation: neon-pulse 2.6s ease-in-out infinite;
+}

@@ -132,12 +132,12 @@ export default function Home() {
 
       <header className="sticky top-0 z-50 border-b border-white/60 bg-[#F7F3E9]/80 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-6 lg:px-10">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center">
             <Image
-              src="/images/ricoai-logo-thin.png"
-              alt="Rico AI"
-              width={120}
-              height={32}
+              src="/images/ricoai-logo-primary.png"
+              alt="Rico AI swan logo"
+              width={36}
+              height={36}
             />
           </div>
           <nav className="hidden items-center gap-6 text-sm text-[#2D4A3A]/80 md:flex">
@@ -160,10 +160,6 @@ export default function Home() {
         {/* Hero */}
         <section id="home" className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-3 rounded-full bg-white/80 px-4 py-2 text-sm font-medium shadow-sm">
-              <Image src="/images/ricoai-logo-primary.png" alt="Rico AI" width={24} height={24} />
-              Scan. Decode. Glow.
-            </div>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl text-[#2D4A3A]">
               Know what you&apos;re really putting on your skin.
             </h1>
@@ -175,13 +171,13 @@ export default function Home() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={appStoreUrl}
-                className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
+                className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
                 Download on iOS — Free 3‑Day Trial
               </a>
               <a
                 href={appStoreUrl}
-                className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
+                className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
                 Get your glow score
               </a>
@@ -195,15 +191,15 @@ export default function Home() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-6 rounded-[40px] bg-white/70 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-white/90 p-4 shadow-[0_40px_120px_-80px_rgba(45,74,58,0.5)]">
+            <div className="absolute -inset-6 rounded-[40px] bg-gradient-to-br from-[#F3E9FF]/70 via-[#EAF4EE]/60 to-[#F6E8E0]/60 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[32px] border border-white/60 bg-transparent p-4 shadow-[0_40px_120px_-80px_rgba(45,74,58,0.5)]">
               <Image
                 src="/images/frame-1.png"
                 alt="Rico AI app screenshots"
                 width={1600}
                 height={1200}
                 quality={100}
-                className="h-auto w-full rounded-[24px] object-cover"
+                className="h-auto w-full rounded-[24px] object-contain"
                 priority
               />
             </div>
@@ -211,18 +207,18 @@ export default function Home() {
         </section>
 
         {/* Animated banner */}
-        <section className="mt-10 overflow-hidden rounded-[24px] border border-white/60 bg-white/70 py-4 shadow-sm">
-          <div className="flex gap-10 whitespace-nowrap px-6 text-sm text-[#2D4A3A]/70">
+        <section className="mt-10 overflow-hidden rounded-[24px] border border-white/60 bg-white/70 py-5 shadow-sm">
+          <div className="flex gap-10 whitespace-nowrap px-6 text-base font-semibold text-[#2D4A3A]/80 sm:text-lg">
             <div className="marquee gap-10">
               {marqueeItems.map((item) => (
                 <span key={`a-${item}`} className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#9CAF88]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#9CAF88]" />
                   {item}
                 </span>
               ))}
               {marqueeItems.map((item) => (
                 <span key={`b-${item}`} className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#D4A574]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#D4A574]" />
                   {item}
                 </span>
               ))}
@@ -246,7 +242,7 @@ export default function Home() {
             </div>
             <a
               href={appStoreUrl}
-              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
+              className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
               Start your free trial
             </a>
@@ -298,7 +294,7 @@ export default function Home() {
             <h2 className="text-3xl font-semibold">See the Rico AI experience.</h2>
           </div>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-[32px] border border-white/80 bg-white/90 p-4 shadow-[0_24px_90px_-70px_rgba(156,175,136,0.45)]">
+            <div className="rounded-[32px] border border-white/60 bg-transparent p-4 shadow-[0_24px_90px_-70px_rgba(156,175,136,0.45)]">
               <Image
                 src="/images/frame-2-padded.png"
                 alt="Rico AI app screen"
@@ -308,7 +304,7 @@ export default function Home() {
                 className="h-auto w-full rounded-[24px] object-contain"
               />
             </div>
-            <div className="rounded-[32px] border border-white/80 bg-white/90 p-4 shadow-[0_24px_90px_-70px_rgba(212,165,116,0.45)]">
+            <div className="rounded-[32px] border border-white/60 bg-transparent p-4 shadow-[0_24px_90px_-70px_rgba(212,165,116,0.45)]">
               <Image
                 src="/images/frame-3-padded.png"
                 alt="Rico AI app screen"
@@ -433,13 +429,13 @@ export default function Home() {
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
             <a
               href={appStoreUrl}
-              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
+              className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
               Download on iOS — Free 3‑Day Trial
             </a>
             <a
               href={appStoreUrl}
-              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
+              className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
               Get your glow score
             </a>
