@@ -50,11 +50,11 @@ body {
 @keyframes neon-rotate {
   0% {
     transform: rotate(0deg);
-    opacity: 0.6;
+    opacity: 0.75;
   }
   100% {
     transform: rotate(360deg);
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 
@@ -70,18 +70,18 @@ body {
   border-radius: 9999px;
   background: conic-gradient(
     from 0deg,
-    rgba(255, 105, 180, 0.95),
-    rgba(255, 105, 180, 0.2),
-    rgba(255, 105, 180, 0.95)
+    rgba(255, 105, 180, 0) 0deg,
+    rgba(255, 105, 180, 0) 280deg,
+    rgba(255, 105, 180, 0.95) 315deg,
+    rgba(255, 105, 180, 0.2) 360deg
   );
   z-index: -1;
-  animation: neon-rotate 3.2s linear infinite;
-  mask: radial-gradient(circle, transparent 60%, #000 62%);
-  -webkit-mask: radial-gradient(circle, transparent 60%, #000 62%);
+  animation: neon-rotate 2.4s linear infinite;
+  mask: radial-gradient(circle, transparent 62%, #000 64%);
+  -webkit-mask: radial-gradient(circle, transparent 62%, #000 64%);
   box-shadow:
-    0 0 10px rgba(255, 105, 180, 0.45),
-    0 0 24px rgba(255, 105, 180, 0.35),
-    0 0 34px rgba(120, 240, 200, 0.2);
+    0 0 10px rgba(255, 105, 180, 0.55),
+    0 0 28px rgba(255, 105, 180, 0.45);
 }
 
 @keyframes review-marquee {

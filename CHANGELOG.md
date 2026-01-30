@@ -5,5 +5,5 @@
 - Added **moving glow stories carousel** (NeoCharge-style motion).
 
 ### Time & Savings
-- Time spent: 0.8 hours
-- Estimated savings (@ $100/hr): **$80**
+- Time spent: 1.3 hours
+- Estimated savings (@ $100/hr): **$130**

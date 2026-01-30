@@ -9,7 +9,8 @@ export default function StatusPage() {
       <section className="mt-8 rounded-2xl border border-white/70 bg-white/80 p-6 shadow-sm">
         <h2 className="text-lg font-semibold">Today</h2>
         <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#2D4A3A]/75">
-          <li>Neon CTAs updated to a higher‑contrast hot pink outline.</li>
+          <li>Neon CTAs upgraded to an animated rotating hot‑pink ring.</li>
+          <li>Blog cards now use images + read‑time badges.</li>
           <li>Glow stories carousel (moving reviews) enabled.</li>
           <li>Ongoing: new Figma screenshots for steps + header logo recolor.</li>
         </ul>

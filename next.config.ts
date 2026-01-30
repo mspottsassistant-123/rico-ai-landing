@@ -19,6 +19,14 @@ const nextConfig: NextConfig = {
         protocol: "http",
         hostname: "ricoai.app",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.shopify.com",
+      },
+      {
+        protocol: "http",
+        hostname: "cdn.shopify.com",
+      },
     ],
   },
 };

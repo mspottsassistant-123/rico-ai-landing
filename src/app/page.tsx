@@ -94,38 +94,39 @@ const blogPosts = [
   {
     title: "Why Your Moisturizer Has More Ingredients Than Dinner",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/why-your-moisturizer-has-more-ingredients-than-dinner-rico-ai",
-    summary:
-      "Skincare labels can look like a food label. Learn how to spot the “extras” and choose cleaner formulas in minutes.",
+    image: "https://www.ricoai.app/cdn/shop/articles/Frame_1948755304.jpg?v=1767736048",
+    readTime: "2–3 min read",
   },
   {
     title: "The Hidden Truth About Skincare Ingredients (Less Is More)",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/the-hidden-truth-about-your-skincare-ingredients-why-less-really-is-more",
-    summary:
-      "A simple guide to minimal routines that actually work — and how to avoid ingredient overload.",
+    image: "https://www.ricoai.app/cdn/shop/articles/Frame_1948755295.webp?v=1762276998",
+    readTime: "2–3 min read",
   },
   {
     title: "Niacinamide: Why This Vitamin B3 Works for Every Skin Type",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/ingredient-breakdown-the-truth-about-niacinamide-why-this-vitamin-b3-powerhouse-works-for-every-skin-type",
-    summary:
-      "What it does, who it helps, and how to choose the right formula without the hype.",
+    image:
+      "https://www.ricoai.app/cdn/shop/articles/ingredient-breakdown-of-niacinamide-serum-closeup-ingredient-pretty-asthetic-ugc-style-vibes-beautiful-landscape-of-niacinamide-orgin_9cf4a5fe-1cd0-4ba4-b831-1c3403da4b59.png?v=1767740735",
+    readTime: "2–3 min read",
   },
   {
     title: "Why Mineral Sunscreen Matters (Badger Difference)",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/why-mineral-sunscreen-matters-holistic-esthetician-explains-the-badger-difference",
-    summary:
-      "Mineral vs. chemical sunscreen, explained simply — so your skin stays calm and protected.",
+    image: "https://www.ricoai.app/cdn/shop/articles/badgers-sunscreen-in-summery-background.png?v=1767741051",
+    readTime: "2–3 min read",
   },
   {
     title: "The Complete Guide to Clean Skincare",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/the-complete-guide-to-clean-skincare-scan-decode-and-glow-with-rico-ai",
-    summary:
-      "A beginner‑friendly roadmap to scan, decode, and build a clean routine that sticks.",
+    image: "/images/frame-1.png",
+    readTime: "2–3 min read",
   },
   {
     title: "Nighttime Skincare Routine: Step‑by‑Step",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/nighttime-skincare-routine-step-by-step-guide-with-rico-ai",
-    summary:
-      "A short, calming night routine to repair your skin and wake up glowing.",
+    image: "/images/frame-2-padded.png",
+    readTime: "2–3 min read",
   },
 ];
 
@@ -356,15 +357,27 @@ export default function Home() {
               <a
                 key={post.link}
                 href={post.link}
-                className="rounded-[28px] border border-white/80 bg-white/95 p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
+                className="group overflow-hidden rounded-[28px] border border-white/80 bg-white/95 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
                 target="_blank"
                 rel="noreferrer"
               >
-                <p className="text-sm font-semibold text-[#2D4A3A]">{post.title}</p>
-                <p className="mt-3 text-sm text-[#2D4A3A]/70">{post.summary}</p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#2D4A3A]">
-                  Read article →
-                </span>
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="inline-flex items-center rounded-full bg-[#F3E9FF] px-3 py-1 text-xs font-semibold text-[#2D4A3A]">
+                    {post.readTime}
+                  </div>
+                  <p className="mt-3 text-sm font-semibold text-[#2D4A3A]">{post.title}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#2D4A3A]">
+                    Read article →
+                  </span>
+                </div>
               </a>
             ))}
           </div>
