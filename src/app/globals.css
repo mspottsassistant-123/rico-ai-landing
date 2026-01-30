@@ -66,11 +66,11 @@ body {
   position: absolute;
   inset: -2px;
   border-radius: 9999px;
-  border: 1px solid rgba(199, 173, 255, 0.9);
+  border: 1px solid rgba(255, 105, 180, 0.95);
   box-shadow:
-    0 0 0 1px rgba(199, 173, 255, 0.55),
-    0 0 18px rgba(199, 173, 255, 0.55),
-    0 0 32px rgba(248, 201, 215, 0.35);
+    0 0 0 1px rgba(255, 105, 180, 0.55),
+    0 0 18px rgba(255, 105, 180, 0.55),
+    0 0 32px rgba(120, 240, 200, 0.25);
   z-index: -1;
   animation: neon-pulse 2.6s ease-in-out infinite;
 }
