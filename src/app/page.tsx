@@ -18,37 +18,37 @@ const features = [
   {
     title: "AI skincare ingredient scanner",
     description:
-      "Snap a label and Rico AI translates ingredients into a clear clean‑to‑toxic score in seconds.",
+      "Scan any label and get a clear clean‑to‑toxic score in seconds — no confusion, no rabbit holes.",
   },
   {
-    title: "Aesthetician‑approved swaps",
+    title: "Esthetician‑approved swaps",
     description:
-      "Discover gentle alternatives under $30 that actually work for your skin and budget.",
+      "Find under‑$30 essentials (cleanser, moisturizer, SPF) plus smarter upgrades when you want more.",
   },
   {
-    title: "Global ingredient translation",
+    title: "Worldwide label translation",
     description:
-      "Shopping abroad? Rico AI decodes labels in 108 countries so nothing slips by.",
+      "Decode products in multiple languages so you can shop confidently anywhere.",
   },
   {
-    title: "Skin‑first, not hype‑first",
+    title: "Sustainable habit tracking",
     description:
-      "Built from real treatment room experience, not influencer trends.",
+      "Build streaks and stay consistent so your skin finally reflects your effort.",
   },
 ];
 
 const steps = [
   {
-    title: "Scan with your camera",
-    description: "Point, scan, done — no typing required.",
+    title: "Point, scan, done",
+    description: "Your camera reads the label — fast and effortless.",
   },
   {
-    title: "Decode the ingredients",
-    description: "See what matters, explained in plain language.",
+    title: "Get clarity, not confusion",
+    description: "We translate the ingredients into a score you can trust.",
   },
   {
-    title: "Glow with better swaps",
-    description: "Choose cleaner options that fit your skin + budget.",
+    title: "Watch your skin transform",
+    description: "Swap smarter, stay consistent, and glow for real.",
   },
 ];
 
@@ -90,24 +90,40 @@ const testimonials = [
 
 const blogPosts = [
   {
-    title: "Why Your Moisturizer Has More Ingredients Than Dinner | Rico AI",
+    title: "Why Your Moisturizer Has More Ingredients Than Dinner",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/why-your-moisturizer-has-more-ingredients-than-dinner-rico-ai",
     summary:
-      "Skincare labels read like processed food. Learn why brands add extras and how to spot clean, effective formulas fast.",
+      "Skincare labels can look like a food label. Learn how to spot the “extras” and choose cleaner formulas in minutes.",
   },
   {
-    title:
-      "The Hidden Truth About Your Skincare Ingredients: Why Less Really Is More",
+    title: "The Hidden Truth About Skincare Ingredients (Less Is More)",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/the-hidden-truth-about-your-skincare-ingredients-why-less-really-is-more",
     summary:
-      "A holistic esthetician breaks down why minimal, clean formulations outperform overstuffed formulas.",
+      "A simple guide to minimal routines that actually work — and how to avoid ingredient overload.",
   },
   {
-    title:
-      "Ingredient Breakdown: The Truth About Niacinamide - Why This Vitamin B3 Powerhouse Works for Every Skin Type",
+    title: "Niacinamide: Why This Vitamin B3 Works for Every Skin Type",
     link: "https://www.ricoai.app/blogs/holisticzee-blog/ingredient-breakdown-the-truth-about-niacinamide-why-this-vitamin-b3-powerhouse-works-for-every-skin-type",
     summary:
-      "Why niacinamide is a universal skincare staple and how to choose the right formula.",
+      "What it does, who it helps, and how to choose the right formula without the hype.",
+  },
+  {
+    title: "Why Mineral Sunscreen Matters (Badger Difference)",
+    link: "https://www.ricoai.app/blogs/holisticzee-blog/why-mineral-sunscreen-matters-holistic-esthetician-explains-the-badger-difference",
+    summary:
+      "Mineral vs. chemical sunscreen, explained simply — so your skin stays calm and protected.",
+  },
+  {
+    title: "The Complete Guide to Clean Skincare",
+    link: "https://www.ricoai.app/blogs/holisticzee-blog/the-complete-guide-to-clean-skincare-scan-decode-and-glow-with-rico-ai",
+    summary:
+      "A beginner‑friendly roadmap to scan, decode, and build a clean routine that sticks.",
+  },
+  {
+    title: "Nighttime Skincare Routine: Step‑by‑Step",
+    link: "https://www.ricoai.app/blogs/holisticzee-blog/nighttime-skincare-routine-step-by-step-guide-with-rico-ai",
+    summary:
+      "A short, calming night routine to repair your skin and wake up glowing.",
   },
 ];
 
@@ -134,7 +150,7 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-6 lg:px-10">
           <div className="flex items-center">
             <Image
-              src="/images/ricoai-logo-primary.png"
+              src="/images/ricoai-swan.png"
               alt="Rico AI swan logo"
               width={36}
               height={36}
@@ -185,9 +201,11 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 text-sm text-[#2D4A3A]/70">
               <span>Small team, growing community</span>
               <span>•</span>
-              <span>Under‑$30 swaps</span>
+              <span>Under‑$30 essentials routine</span>
               <span>•</span>
-              <span>Global ingredient translation</span>
+              <span>Worldwide label translation</span>
+              <span>•</span>
+              <span>Smart habit tracking</span>
             </div>
           </div>
           <div className="relative">
@@ -265,11 +283,12 @@ export default function Home() {
               Why Rico AI
             </p>
             <h2 className="mt-2 text-3xl font-semibold">
-              Zen, holistic, AI‑powered skincare — with real results.
+              Your pocket esthetician — 24/7, worldwide.
             </h2>
             <p className="mt-3 max-w-2xl text-[#2D4A3A]/75">
-              A skincare ingredient scanner that blends AI smarts with esthetician
-              experience. Scan, learn, and glow — without the overwhelm.
+              Built by a holistic esthetician + health coach who healed her own skin
+              through a root‑cause approach. Rico AI makes ingredient clarity simple
+              so anyone can shop clean and feel safe.
             </p>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -294,7 +313,7 @@ export default function Home() {
             <h2 className="text-3xl font-semibold">See the Rico AI experience.</h2>
           </div>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-[32px] border border-white/60 bg-transparent p-4 shadow-[0_24px_90px_-70px_rgba(156,175,136,0.45)]">
+            <div className="rounded-[32px] border border-white/60 bg-gradient-to-br from-[#F3E9FF]/70 via-[#EAF4EE]/40 to-[#F7F3E9]/40 p-4 shadow-[0_24px_90px_-70px_rgba(156,175,136,0.45)]">
               <Image
                 src="/images/frame-2-padded.png"
                 alt="Rico AI app screen"
@@ -304,7 +323,7 @@ export default function Home() {
                 className="h-auto w-full rounded-[24px] object-contain"
               />
             </div>
-            <div className="rounded-[32px] border border-white/60 bg-transparent p-4 shadow-[0_24px_90px_-70px_rgba(212,165,116,0.45)]">
+            <div className="rounded-[32px] border border-white/60 bg-gradient-to-br from-[#F3E9FF]/70 via-[#F6E8E0]/40 to-[#F7F3E9]/40 p-4 shadow-[0_24px_90px_-70px_rgba(212,165,116,0.45)]">
               <Image
                 src="/images/frame-3-padded.png"
                 alt="Rico AI app screen"
@@ -367,6 +386,16 @@ export default function Home() {
                 </span>
               </a>
             ))}
+          </div>
+          <div className="mt-6">
+            <a
+              href="https://www.ricoai.app/blogs/holisticzee-blog"
+              className="glass-button inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold text-[#2D4A3A]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View all articles
+            </a>
           </div>
         </section>
 
