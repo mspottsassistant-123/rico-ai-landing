@@ -434,18 +434,12 @@ export default function Home() {
             Scan everything in 3 seconds. Get safety scores from a licensed
             esthetician. Find cleaner alternatives under $30.
           </p>
-          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-6 flex justify-center">
             <a
               href={appStoreUrl}
-              className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
+              className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
-              Download on iOS — Free 3‑Day Trial
-            </a>
-            <a
-              href={appStoreUrl}
-              className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
-            >
-              Get your glow score
+              Start My Glow Transformation
             </a>
           </div>
         </section>
