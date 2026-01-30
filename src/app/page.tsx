@@ -5,64 +5,84 @@ const appStoreUrl =
 
 const features = [
   {
-    title: "Scan any product in seconds",
+    title: "AI skincare ingredient scanner",
     description:
-      "Point your camera at any label. Rico AI reads it instantly and highlights the ingredients that matter.",
+      "Snap a label and Rico AI translates ingredients into a clear clean‑to‑toxic score in seconds.",
   },
   {
-    title: "Clear clean-to-toxic scores",
+    title: "Aesthetician‑approved swaps",
     description:
-      "No jargon. Get a simple score and plain‑language explanations you can trust.",
-  },
-  {
-    title: "Find gentle swaps under $30",
-    description:
-      "Discover aesthetician‑approved alternatives that work for your skin and budget.",
+      "Discover gentle alternatives under $30 that actually work for your skin and budget.",
   },
   {
     title: "Global ingredient translation",
     description:
-      "Shopping abroad? Rico AI decodes labels in 108 countries so you never miss hidden toxins.",
+      "Shopping abroad? Rico AI decodes labels in 108 countries so nothing slips by.",
+  },
+  {
+    title: "Skin‑first, not hype‑first",
+    description:
+      "Built from real treatment room experience, not influencer trends.",
   },
 ];
 
 const steps = [
   {
-    title: "Snap a product",
-    description: "Your camera does the work.",
+    title: "Scan any product",
+    description: "Use your camera — no typing required.",
   },
   {
-    title: "Get your glow score",
-    description: "Understand every ingredient in plain English.",
+    title: "Understand your glow score",
+    description: "See what matters, explained in plain language.",
   },
   {
-    title: "Swap smarter",
-    description: "Find cleaner picks made for your skin and budget.",
+    title: "Choose cleaner swaps",
+    description: "Find options that fit your skin goals and budget.",
   },
 ];
 
 const faqs = [
   {
+    q: "Is Rico AI just for skincare pros?",
+    a: "Nope. It’s built for beginners and skincare nerds alike — simple scores plus deeper ingredient breakdowns.",
+  },
+  {
+    q: "How accurate are the scores?",
+    a: "They’re grounded in esthetician expertise and ingredient safety research. We’re always improving with user feedback.",
+  },
+  {
     q: "Is it really free to try?",
-    a: "Yes. Start with a free 3‑day trial—no credit card required.",
+    a: "Yes. Start with a free 3‑day trial — no credit card required.",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "I finally understand what’s in my products — and my skin is calmer already.",
+    name: "Jasmine, San Diego",
   },
   {
-    q: "Does it work outside the U.S.?",
-    a: "Yes. Rico AI works in 108 countries with ingredient translation built in.",
+    quote:
+      "This feels like a tiny esthetician in my pocket. I trust it more than random TikTok tips.",
+    name: "Elena, NYC",
   },
   {
-    q: "Is this for beginners or skincare nerds?",
-    a: "Both. You’ll get simple scores plus deeper ingredient explanations when you want them.",
+    quote:
+      "The under‑$30 swaps are chef’s kiss. I’ve saved money and my skin loves me.",
+    name: "Priya, London",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F7F5F2] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#F7F4FF] text-[#1A1A1A]">
       <main className="mx-auto w-full max-w-6xl px-6 pb-24 pt-10 lg:px-10">
         {/* Hero */}
-        <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="space-y-6">
+        <section className="relative grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="absolute -top-10 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-[#FFE4F3] blur-[120px]" />
+          <div className="absolute -right-16 top-10 h-72 w-72 rounded-full bg-[#D6F6FF] blur-[140px]" />
+          <div className="relative space-y-6">
             <div className="inline-flex items-center gap-3 rounded-full bg-white/80 px-4 py-2 text-sm font-medium shadow-sm">
               <Image
                 src="https://www.ricoai.app/cdn/shop/files/RicoAILogo.png"
@@ -70,14 +90,15 @@ export default function Home() {
                 width={28}
                 height={28}
               />
-              Your pocket esthetician — worldwide
+              AI skincare ingredient scanner
             </div>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
               Know what you&apos;re really putting on your skin.
             </h1>
             <p className="text-lg text-[#4B4B4B]">
-              Scan any product in 3 seconds, get a clean‑to‑toxic score you actually
-              understand, and discover aesthetician‑approved swaps under $30.
+              Rico AI turns confusing labels into a glow‑friendly score you can trust.
+              Built by a holistic esthetician and a small team who care deeply about
+              real results — not hype.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -94,9 +115,11 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-wrap gap-4 text-sm text-[#6B6B6B]">
+              <span>Small team, growing community</span>
+              <span>•</span>
               <span>108 countries supported</span>
               <span>•</span>
-              <span>Trusted by glow‑hunters worldwide</span>
+              <span>Under‑$30 swaps</span>
             </div>
           </div>
           <div className="relative">
@@ -149,34 +172,38 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Logos / trust */}
+        {/* Trust */}
         <section className="mt-20 rounded-3xl border border-black/5 bg-white px-8 py-10 shadow-sm">
           <div className="grid gap-6 md:grid-cols-[1fr_2fr] md:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-[#8C8C8C]">
-                Built by a holistic esthetician
+                Realistic, not overhyped
               </p>
               <h2 className="mt-3 text-2xl font-semibold">
-                From treatment room expertise to your pocket.
+                A small team with a big mission.
               </h2>
             </div>
             <p className="text-[#4B4B4B]">
-              Rico AI gives you the same ingredient analysis used in professional
-              skincare consultations — now available instantly in any store, in any
-              country.
+              We&apos;re a tiny team building Rico AI with care. We don&apos;t have millions of
+              downloads yet — and that&apos;s okay. We&apos;re focused on real skin wins, one
+              scan at a time, and your feedback helps us grow.
             </p>
           </div>
         </section>
 
         {/* Features */}
         <section className="mt-20">
-          <div className="flex items-end justify-between gap-6">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-[#8C8C8C]">
-                Why Rico AI
-              </p>
-              <h2 className="mt-2 text-3xl font-semibold">Confident skincare, without the guesswork.</h2>
-            </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#8C8C8C]">
+              Why Rico AI
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold">
+              The fun, girly, AI‑powered way to shop skincare.
+            </h2>
+            <p className="mt-3 max-w-2xl text-[#4B4B4B]">
+              A skincare ingredient scanner that blends AI smarts with esthetician
+              experience. Scan, learn, and glow — without the overwhelm.
+            </p>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {features.map((feature) => (
@@ -274,23 +301,7 @@ export default function Home() {
             <h2 className="text-3xl font-semibold">Real results, real confidence.</h2>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                quote:
-                  "I finally understand what’s in my products — and my skin has never looked better.",
-                name: "Jasmine, San Diego",
-              },
-              {
-                quote:
-                  "Rico AI saved me from buying a serum full of irritants. Instant peace of mind.",
-                name: "Elena, NYC",
-              },
-              {
-                quote:
-                  "The swaps under $30 are clutch. It’s like a friend shopping with me.",
-                name: "Priya, London",
-              },
-            ].map((item) => (
+            {testimonials.map((item) => (
               <div
                 key={item.name}
                 className="rounded-3xl border border-black/5 bg-white p-6 shadow-sm"
@@ -321,7 +332,7 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="mt-20 rounded-3xl bg-[#E3F3EE] px-8 py-12 text-center">
+        <section className="mt-20 rounded-3xl bg-[#FBE8FF] px-8 py-12 text-center">
           <h2 className="text-3xl font-semibold">Ready for your glow‑up?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-[#4B4B4B]">
             Your bathroom cabinet has products working against your skin right now.
