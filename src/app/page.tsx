@@ -7,7 +7,6 @@ const nav = [
   { label: "Home", href: "#home" },
   { label: "How it works", href: "#how" },
   { label: "Features", href: "#features" },
-  { label: "Screenshots", href: "#screens" },
   { label: "Glow stories", href: "#glow" },
   { label: "Blog", href: "#blog" },
   { label: "FAQ", href: "#faq" },
@@ -41,14 +40,17 @@ const steps = [
   {
     title: "Point, scan, done",
     description: "Your camera reads the label — fast and effortless.",
+    image: "/images/frame-1.png",
   },
   {
     title: "Get clarity, not confusion",
     description: "We translate the ingredients into a score you can trust.",
+    image: "/images/frame-2-padded.png",
   },
   {
     title: "Watch your skin transform",
     description: "Swap smarter, stay consistent, and glow for real.",
+    image: "/images/frame-3-padded.png",
   },
 ];
 
@@ -131,7 +133,7 @@ const marqueeItems = [
   "✨ Scan. Decode. Glow.",
   "🧴 Ingredient Decoder",
   "🌿 Clean Swaps",
-  "🌍 108 Countries",
+  "🌍 Worldwide",
   "💖 Esthetician‑Built",
   "📸 Scan in Seconds",
   "🧠 AI‑Powered",
@@ -165,7 +167,7 @@ export default function Home() {
           </nav>
           <a
             href={appStoreUrl}
-            className="glass-button inline-flex items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-[#2D4A3A]"
+            className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-[#2D4A3A]"
           >
             Get your glow score
           </a>
@@ -181,8 +183,8 @@ export default function Home() {
             </h1>
             <p className="text-lg text-[#2D4A3A]/80">
               Rico AI turns confusing labels into a glow‑friendly score you can trust.
-              Built by a holistic esthetician and a tiny team who care deeply about
-              real results — not hype.
+              Built by a solo holistic esthetician who learned to heal her own skin
+              and now wants you to feel safe, clear, and confident too.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
@@ -199,7 +201,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-wrap gap-4 text-sm text-[#2D4A3A]/70">
-              <span>Small team, growing community</span>
+              <span>Solo founder, growing community</span>
               <span>•</span>
               <span>Under‑$30 essentials routine</span>
               <span>•</span>
@@ -226,7 +228,7 @@ export default function Home() {
 
         {/* Animated banner */}
         <section className="mt-10 overflow-hidden rounded-[24px] border border-white/60 bg-white/70 py-5 shadow-sm">
-          <div className="flex gap-10 whitespace-nowrap px-6 text-base font-semibold text-[#2D4A3A]/80 sm:text-lg">
+          <div className="flex gap-10 whitespace-nowrap px-6 text-lg font-semibold text-[#2D4A3A]/85 sm:text-xl">
             <div className="marquee gap-10">
               {marqueeItems.map((item) => (
                 <span key={`a-${item}`} className="inline-flex items-center gap-2">
@@ -271,6 +273,15 @@ export default function Home() {
                 <p className="text-sm text-[#2D4A3A]/60">Step {index + 1}</p>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
                 <p className="mt-2 text-[#2D4A3A]/70">{step.description}</p>
+                <div className="mt-4 rounded-[20px] bg-white/70 p-3">
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    width={1200}
+                    height={1600}
+                    className="h-auto w-full rounded-[16px] object-contain"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -304,38 +315,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Screenshots */}
-        <section id="screens" className="mt-16">
-          <div className="flex flex-col gap-2">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
-              Screenshots
-            </p>
-            <h2 className="text-3xl font-semibold">See the Rico AI experience.</h2>
-          </div>
-          <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-[32px] border border-white/60 bg-gradient-to-br from-[#F3E9FF]/70 via-[#EAF4EE]/40 to-[#F7F3E9]/40 p-4 shadow-[0_24px_90px_-70px_rgba(156,175,136,0.45)]">
-              <Image
-                src="/images/frame-2-padded.png"
-                alt="Rico AI app screen"
-                width={1500}
-                height={2000}
-                quality={100}
-                className="h-auto w-full rounded-[24px] object-contain"
-              />
-            </div>
-            <div className="rounded-[32px] border border-white/60 bg-gradient-to-br from-[#F3E9FF]/70 via-[#F6E8E0]/40 to-[#F7F3E9]/40 p-4 shadow-[0_24px_90px_-70px_rgba(212,165,116,0.45)]">
-              <Image
-                src="/images/frame-3-padded.png"
-                alt="Rico AI app screen"
-                width={1500}
-                height={2000}
-                quality={100}
-                className="h-auto w-full rounded-[24px] object-contain"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Testimonials */}
         <section id="glow" className="mt-16">
           <div className="flex flex-col gap-2">
@@ -348,7 +327,7 @@ export default function Home() {
             {testimonials.map((item) => (
               <div
                 key={item.name}
-                className="rounded-[28px] border border-white/80 bg-white/95 p-6 shadow-[0_16px_70px_-60px_rgba(212,165,116,0.6)]"
+                className="rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
               >
                 <div className="flex items-center gap-1 text-[#D4A574]">
                   {Array.from({ length: item.rating }).map((_, i) => (
@@ -400,7 +379,7 @@ export default function Home() {
         </section>
 
         {/* Email capture */}
-        <section className="mt-16 rounded-[32px] border border-white/80 bg-white/95 px-6 py-10 shadow-[0_20px_80px_-60px_rgba(156,175,136,0.45)] sm:px-8">
+        <section className="mt-16 rounded-[32px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] px-6 py-10 shadow-[0_20px_80px_-60px_rgba(233,215,255,0.6)] sm:px-8">
           <div className="grid gap-6 md:grid-cols-[1.2fr_1fr] md:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
@@ -421,7 +400,7 @@ export default function Home() {
               />
               <button
                 type="submit"
-                className="glass-button inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-[#2D4A3A]"
+                className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
                 Join the list
               </button>
@@ -430,7 +409,7 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="mt-16 rounded-[32px] border border-white/80 bg-white/95 px-6 py-10 shadow-[0_20px_80px_-60px_rgba(156,175,136,0.45)] sm:px-8">
+        <section id="faq" className="mt-16 rounded-[32px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] px-6 py-10 shadow-[0_20px_80px_-60px_rgba(233,215,255,0.6)] sm:px-8">
           <div className="flex flex-col gap-2">
             <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
               FAQ
