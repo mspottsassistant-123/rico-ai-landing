@@ -50,11 +50,9 @@ body {
 @keyframes neon-pulse {
   0%, 100% {
     opacity: 0.5;
-    filter: blur(10px);
   }
   50% {
     opacity: 0.9;
-    filter: blur(6px);
   }
 }
 
@@ -68,7 +66,26 @@ body {
   position: absolute;
   inset: -2px;
   border-radius: 9999px;
-  background: linear-gradient(120deg, rgba(233,215,255,0.9), rgba(248,201,215,0.9), rgba(207,231,213,0.9));
+  border: 1px solid rgba(199, 173, 255, 0.9);
+  box-shadow:
+    0 0 0 1px rgba(199, 173, 255, 0.55),
+    0 0 18px rgba(199, 173, 255, 0.55),
+    0 0 32px rgba(248, 201, 215, 0.35);
   z-index: -1;
   animation: neon-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes review-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.review-marquee {
+  display: flex;
+  width: max-content;
+  animation: review-marquee 32s linear infinite;
 }
