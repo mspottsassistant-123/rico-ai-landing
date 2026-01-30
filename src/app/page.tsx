@@ -8,6 +8,7 @@ const nav = [
   { label: "How it works", href: "#how" },
   { label: "Features", href: "#features" },
   { label: "Screenshots", href: "#screens" },
+  { label: "Glow stories", href: "#glow" },
   { label: "FAQ", href: "#faq" },
   { label: "Download", href: "#download" },
 ];
@@ -37,16 +38,16 @@ const features = [
 
 const steps = [
   {
-    title: "Scan any product",
-    description: "Use your camera — no typing required.",
+    title: "Scan with your camera",
+    description: "Point, scan, done — no typing required.",
   },
   {
-    title: "Understand your glow score",
+    title: "Decode the ingredients",
     description: "See what matters, explained in plain language.",
   },
   {
-    title: "Choose cleaner swaps",
-    description: "Find options that fit your skin goals and budget.",
+    title: "Glow with better swaps",
+    description: "Choose cleaner options that fit your skin + budget.",
   },
 ];
 
@@ -70,21 +71,24 @@ const testimonials = [
     quote:
       "I finally understand what’s in my products — and my skin is calmer already.",
     name: "Jasmine, San Diego",
+    rating: 5,
   },
   {
     quote:
       "This feels like a tiny esthetician in my pocket. I trust it more than random TikTok tips.",
     name: "Elena, NYC",
+    rating: 5,
   },
   {
     quote:
       "The under‑$30 swaps are chef’s kiss. I’ve saved money and my skin loves me.",
     name: "Priya, London",
+    rating: 4,
   },
 ];
 
 const marqueeItems = [
-  "✨ Glow Score",
+  "✨ Scan. Decode. Glow.",
   "🧴 Ingredient Decoder",
   "🌿 Clean Swaps",
   "🌍 108 Countries",
@@ -95,29 +99,33 @@ const marqueeItems = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FCF7FF] text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#F7F3E9] text-[#2D4A3A]">
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute left-1/2 top-[-180px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#FFD6F5] blur-[160px]" />
-        <div className="absolute right-[-120px] top-[160px] h-[360px] w-[360px] rounded-full bg-[#C6F1FF] blur-[160px]" />
-        <div className="absolute bottom-[-180px] left-[10%] h-[420px] w-[420px] rounded-full bg-[#E6FFF3] blur-[180px]" />
+        <div className="absolute left-1/2 top-[-160px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#E9D7FF] blur-[160px]" />
+        <div className="absolute right-[-120px] top-[160px] h-[360px] w-[360px] rounded-full bg-[#F8C9D7] blur-[160px]" />
+        <div className="absolute bottom-[-180px] left-[10%] h-[420px] w-[420px] rounded-full bg-[#CFE7D5] blur-[180px]" />
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-white/60 bg-white/70 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-white/60 bg-[#F7F3E9]/80 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-6 lg:px-10">
           <div className="flex items-center gap-3">
-            <Image src="/images/ricoai-logo.png" alt="Rico AI" width={32} height={32} />
-            <span className="text-sm font-semibold tracking-wide">Rico AI</span>
+            <Image
+              src="/images/ricoai-logo-thin.png"
+              alt="Rico AI"
+              width={120}
+              height={32}
+            />
           </div>
-          <nav className="hidden items-center gap-6 text-sm text-[#4B4B4B] md:flex">
+          <nav className="hidden items-center gap-6 text-sm text-[#2D4A3A]/80 md:flex">
             {nav.map((item) => (
-              <a key={item.href} href={item.href} className="hover:text-black">
+              <a key={item.href} href={item.href} className="hover:text-[#2D4A3A]">
                 {item.label}
               </a>
             ))}
           </nav>
           <a
             href={appStoreUrl}
-            className="glass-button inline-flex items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-[#1A1A1A]"
+            className="glass-button inline-flex items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-[#2D4A3A]"
           >
             Get your glow score
           </a>
@@ -128,14 +136,14 @@ export default function Home() {
         {/* Hero */}
         <section id="home" className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 text-sm font-medium shadow-sm">
-              <Image src="/images/ricoai-logo.png" alt="Rico AI" width={24} height={24} />
-              Your pocket esthetician — in 108 countries
+            <div className="inline-flex items-center gap-3 rounded-full bg-white/80 px-4 py-2 text-sm font-medium shadow-sm">
+              <Image src="/images/ricoai-logo-primary.png" alt="Rico AI" width={24} height={24} />
+              Scan. Decode. Glow.
             </div>
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl text-[#2D4A3A]">
               Know what you&apos;re really putting on your skin.
             </h1>
-            <p className="text-lg text-[#4B4B4B]">
+            <p className="text-lg text-[#2D4A3A]/80">
               Rico AI turns confusing labels into a glow‑friendly score you can trust.
               Built by a holistic esthetician and a tiny team who care deeply about
               real results — not hype.
@@ -143,18 +151,18 @@ export default function Home() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={appStoreUrl}
-                className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#1A1A1A]"
+                className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
                 Download on iOS — Free 3‑Day Trial
               </a>
               <a
                 href={appStoreUrl}
-                className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#1A1A1A]"
+                className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
                 Get your glow score
               </a>
             </div>
-            <div className="flex flex-wrap gap-4 text-sm text-[#6B6B6B]">
+            <div className="flex flex-wrap gap-4 text-sm text-[#2D4A3A]/70">
               <span>Small team, growing community</span>
               <span>•</span>
               <span>Under‑$30 swaps</span>
@@ -164,7 +172,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="absolute -inset-6 rounded-[40px] bg-white/70 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-white/90 p-4 shadow-[0_40px_120px_-80px_rgba(0,0,0,0.6)]">
+            <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-white/90 p-4 shadow-[0_40px_120px_-80px_rgba(45,74,58,0.5)]">
               <Image
                 src="/images/frame-1.png"
                 alt="Rico AI app screenshots"
@@ -180,17 +188,17 @@ export default function Home() {
 
         {/* Animated banner */}
         <section className="mt-10 overflow-hidden rounded-[24px] border border-white/60 bg-white/70 py-4 shadow-sm">
-          <div className="flex gap-10 whitespace-nowrap px-6 text-sm text-[#6B6B6B]">
+          <div className="flex gap-10 whitespace-nowrap px-6 text-sm text-[#2D4A3A]/70">
             <div className="marquee gap-10">
               {marqueeItems.map((item) => (
                 <span key={`a-${item}`} className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#C9B7FF]" />
+                  <span className="h-2 w-2 rounded-full bg-[#9CAF88]" />
                   {item}
                 </span>
               ))}
               {marqueeItems.map((item) => (
                 <span key={`b-${item}`} className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#9FE7FF]" />
+                  <span className="h-2 w-2 rounded-full bg-[#D4A574]" />
                   {item}
                 </span>
               ))}
@@ -199,27 +207,32 @@ export default function Home() {
         </section>
 
         {/* How it works */}
-        <section id="how" className="mt-16 rounded-[36px] bg-gradient-to-br from-[#14121C] via-[#1B1A24] to-[#2A1F2B] px-6 py-10 text-white sm:px-8 sm:py-12">
+        <section
+          id="how"
+          className="mt-16 rounded-[36px] bg-gradient-to-br from-[#EAF4EE] via-[#F7F3E9] to-[#F6E8E0] px-6 py-10 text-[#2D4A3A] shadow-[0_30px_120px_-90px_rgba(45,74,58,0.45)] sm:px-8 sm:py-12"
+        >
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-white/60">
-                Simple as 1‑2‑3
+              <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
+                Scan. Decode. Glow.
               </p>
-              <h2 className="mt-2 text-3xl font-semibold">From confused to confident in 3 seconds.</h2>
+              <h2 className="mt-2 text-3xl font-semibold">
+                Calm, clear skincare in three effortless steps.
+              </h2>
             </div>
             <a
               href={appStoreUrl}
-              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#1A1A1A]"
+              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
-              Download on iOS
+              Start your free trial
             </a>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((step, index) => (
-              <div key={step.title} className="rounded-[24px] bg-white/5 p-6">
-                <p className="text-sm text-white/60">Step {index + 1}</p>
+              <div key={step.title} className="rounded-[24px] bg-white/80 p-6 shadow-sm">
+                <p className="text-sm text-[#2D4A3A]/60">Step {index + 1}</p>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-white/70">{step.description}</p>
+                <p className="mt-2 text-[#2D4A3A]/70">{step.description}</p>
               </div>
             ))}
           </div>
@@ -228,13 +241,13 @@ export default function Home() {
         {/* Features */}
         <section id="features" className="mt-16">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#9A8FBF]">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
               Why Rico AI
             </p>
             <h2 className="mt-2 text-3xl font-semibold">
-              Fun, girly, AI‑powered skincare — with real results.
+              Zen, holistic, AI‑powered skincare — with real results.
             </h2>
-            <p className="mt-3 max-w-2xl text-[#4B4B4B]">
+            <p className="mt-3 max-w-2xl text-[#2D4A3A]/75">
               A skincare ingredient scanner that blends AI smarts with esthetician
               experience. Scan, learn, and glow — without the overwhelm.
             </p>
@@ -243,10 +256,10 @@ export default function Home() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-[28px] border border-white/80 bg-white/90 p-6 shadow-[0_20px_80px_-60px_rgba(123,97,255,0.5)]"
+                className="rounded-[28px] border border-white/80 bg-white/90 p-6 shadow-[0_20px_80px_-60px_rgba(156,175,136,0.6)]"
               >
                 <h3 className="text-lg font-semibold">{feature.title}</h3>
-                <p className="mt-3 text-[#4B4B4B]">{feature.description}</p>
+                <p className="mt-3 text-[#2D4A3A]/75">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -255,28 +268,28 @@ export default function Home() {
         {/* Screenshots */}
         <section id="screens" className="mt-16">
           <div className="flex flex-col gap-2">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#9A8FBF]">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
               Screenshots
             </p>
             <h2 className="text-3xl font-semibold">See the Rico AI experience.</h2>
           </div>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-[32px] border border-white/80 bg-white/90 p-4 shadow-[0_24px_90px_-70px_rgba(99,140,255,0.45)]">
+            <div className="rounded-[32px] border border-white/80 bg-white/90 p-4 shadow-[0_24px_90px_-70px_rgba(156,175,136,0.45)]">
               <Image
-                src="/images/frame-2.webp"
+                src="/images/frame-2-padded.png"
                 alt="Rico AI app screen"
-                width={1600}
-                height={1200}
+                width={1500}
+                height={2000}
                 quality={100}
                 className="h-auto w-full rounded-[24px] object-contain"
               />
             </div>
-            <div className="rounded-[32px] border border-white/80 bg-white/90 p-4 shadow-[0_24px_90px_-70px_rgba(255,120,200,0.45)]">
+            <div className="rounded-[32px] border border-white/80 bg-white/90 p-4 shadow-[0_24px_90px_-70px_rgba(212,165,116,0.45)]">
               <Image
-                src="/images/frame-3.webp"
+                src="/images/frame-3-padded.png"
                 alt="Rico AI app screen"
-                width={1600}
-                height={1200}
+                width={1500}
+                height={2000}
                 quality={100}
                 className="h-auto w-full rounded-[24px] object-contain"
               />
@@ -285,9 +298,9 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="mt-16">
+        <section id="glow" className="mt-16">
           <div className="flex flex-col gap-2">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#9A8FBF]">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
               Glow stories
             </p>
             <h2 className="text-3xl font-semibold">Real results, real confidence.</h2>
@@ -296,24 +309,29 @@ export default function Home() {
             {testimonials.map((item) => (
               <div
                 key={item.name}
-                className="rounded-[28px] border border-white/80 bg-white/90 p-6 shadow-[0_16px_70px_-60px_rgba(255,120,200,0.6)]"
+                className="rounded-[28px] border border-white/80 bg-white/95 p-6 shadow-[0_16px_70px_-60px_rgba(212,165,116,0.6)]"
               >
-                <p className="text-[#4B4B4B]">“{item.quote}”</p>
-                <p className="mt-4 text-sm font-semibold text-[#1A1A1A]">{item.name}</p>
+                <div className="flex items-center gap-1 text-[#D4A574]">
+                  {Array.from({ length: item.rating }).map((_, i) => (
+                    <span key={`${item.name}-${i}`}>★</span>
+                  ))}
+                </div>
+                <p className="mt-3 text-[#2D4A3A]/80">“{item.quote}”</p>
+                <p className="mt-4 text-sm font-semibold text-[#2D4A3A]">{item.name}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Email capture */}
-        <section className="mt-16 rounded-[32px] border border-white/80 bg-white/90 px-6 py-10 shadow-[0_20px_80px_-60px_rgba(99,140,255,0.45)] sm:px-8">
+        <section className="mt-16 rounded-[32px] border border-white/80 bg-white/95 px-6 py-10 shadow-[0_20px_80px_-60px_rgba(156,175,136,0.45)] sm:px-8">
           <div className="grid gap-6 md:grid-cols-[1.2fr_1fr] md:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-[#9A8FBF]">
+              <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
                 Join the glow list
               </p>
               <h2 className="mt-2 text-3xl font-semibold">Get early tips + feature drops.</h2>
-              <p className="mt-3 text-[#4B4B4B]">
+              <p className="mt-3 text-[#2D4A3A]/75">
                 We’re a small team building Rico AI with care. Join the list for
                 skincare tips, app updates, and early access features.
               </p>
@@ -323,11 +341,11 @@ export default function Home() {
                 type="email"
                 name="email"
                 placeholder="you@example.com"
-                className="w-full rounded-full border border-black/10 bg-white/70 px-4 py-3 text-sm outline-none"
+                className="w-full rounded-full border border-black/10 bg-white/70 px-4 py-3 text-sm text-[#2D4A3A] outline-none"
               />
               <button
                 type="submit"
-                className="glass-button inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-[#1A1A1A]"
+                className="glass-button inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
                 Join the list
               </button>
@@ -336,9 +354,9 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="mt-16 rounded-[32px] border border-white/80 bg-white/90 px-6 py-10 shadow-[0_20px_80px_-60px_rgba(99,140,255,0.45)] sm:px-8">
+        <section id="faq" className="mt-16 rounded-[32px] border border-white/80 bg-white/95 px-6 py-10 shadow-[0_20px_80px_-60px_rgba(156,175,136,0.45)] sm:px-8">
           <div className="flex flex-col gap-2">
-            <p className="text-sm font-semibold uppercase tracking-wider text-[#9A8FBF]">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
               FAQ
             </p>
             <h2 className="text-3xl font-semibold">Answers before you scan.</h2>
@@ -347,16 +365,16 @@ export default function Home() {
             {faqs.map((item) => (
               <div key={item.q} className="space-y-3">
                 <h3 className="text-lg font-semibold">{item.q}</h3>
-                <p className="text-[#4B4B4B]">{item.a}</p>
+                <p className="text-[#2D4A3A]/75">{item.a}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* CTA */}
-        <section id="download" className="mt-16 rounded-[36px] bg-gradient-to-br from-[#FFE4F5] via-[#F3ECFF] to-[#DFF8FF] px-6 py-10 text-center shadow-[0_30px_120px_-80px_rgba(255,140,210,0.7)] sm:px-8">
+        <section id="download" className="mt-16 rounded-[36px] bg-gradient-to-br from-[#EAF4EE] via-[#F7F3E9] to-[#F6E8E0] px-6 py-10 text-center shadow-[0_30px_120px_-80px_rgba(156,175,136,0.5)] sm:px-8">
           <h2 className="text-3xl font-semibold">Ready for your glow‑up?</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-[#4B4B4B]">
+          <p className="mx-auto mt-4 max-w-2xl text-[#2D4A3A]/75">
             Your bathroom cabinet has products working against your skin right now.
             Scan everything in 3 seconds. Get safety scores from a licensed
             esthetician. Find cleaner alternatives under $30.
@@ -364,22 +382,22 @@ export default function Home() {
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
             <a
               href={appStoreUrl}
-              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#1A1A1A]"
+              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
               Download on iOS — Free 3‑Day Trial
             </a>
             <a
               href={appStoreUrl}
-              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#1A1A1A]"
+              className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
               Get your glow score
             </a>
           </div>
         </section>
 
-        <footer className="mt-16 flex flex-col items-center justify-between gap-4 text-sm text-[#8C8C8C] md:flex-row">
+        <footer className="mt-16 flex flex-col items-center justify-between gap-4 text-sm text-[#2D4A3A]/70 md:flex-row">
           <div className="flex items-center gap-2">
-            <Image src="/images/ricoai-logo.png" alt="Rico AI" width={24} height={24} />
+            <Image src="/images/ricoai-logo-primary.png" alt="Rico AI" width={24} height={24} />
             <span>Rico AI</span>
           </div>
           <p>© {new Date().getFullYear()} Rico AI. All rights reserved.</p>
