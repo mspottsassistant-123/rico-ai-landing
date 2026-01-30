@@ -286,9 +286,9 @@ export default function Home() {
               Your pocket esthetician — 24/7, worldwide.
             </h2>
             <p className="mt-3 max-w-2xl text-[#2D4A3A]/75">
-              Built by a holistic esthetician + health coach who healed her own skin
-              through a root‑cause approach. Rico AI makes ingredient clarity simple
-              so anyone can shop clean and feel safe.
+              Made by a human, for real people who still feel lost in skincare.
+              Rico AI makes clean, affordable choices accessible — no appointment
+              needed. Every recommendation is pre‑vetted by me using Rico AI itself.
             </p>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
