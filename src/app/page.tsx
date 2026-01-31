@@ -179,14 +179,30 @@ export default function Home() {
         {/* Hero */}
         <section id="home" className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-6">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
+              Rico AI skincare scanner
+            </p>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl text-[#2D4A3A]">
-              Know what you&apos;re really putting on your skin.
+              Scan any skincare label. Get a clean‑to‑toxic score in seconds.
             </h1>
             <p className="text-lg text-[#2D4A3A]/80">
-              Rico AI turns confusing labels into a glow‑friendly score you can trust.
-              Built by a solo holistic esthetician who learned to heal her own skin
-              and now wants you to feel safe, clear, and confident too.
+              Rico AI translates ingredients, flags red‑flag irritants, and suggests
+              esthetician‑approved swaps under $30 — so you can shop with confidence.
             </p>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {[
+                "1. Scan the label",
+                "2. See your safety score",
+                "3. Swap for cleaner options",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[18px] border border-white/80 bg-white/80 px-4 py-3 text-sm font-semibold text-[#2D4A3A]/80 shadow-sm"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={appStoreUrl}
@@ -195,14 +211,14 @@ export default function Home() {
                 Download on iOS — Free 3‑Day Trial
               </a>
               <a
-                href={appStoreUrl}
-                className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
+                href="#how"
+                className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
-                Get your glow score
+                See how it works
               </a>
             </div>
             <div className="flex flex-wrap gap-4 text-sm text-[#2D4A3A]/70">
-              <span>Solo founder, growing community</span>
+              <span>Esthetician‑built guidance</span>
               <span>•</span>
               <span>Under‑$30 essentials routine</span>
               <span>•</span>
