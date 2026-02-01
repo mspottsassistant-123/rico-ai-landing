@@ -40,7 +40,7 @@ const steps = [
   {
     title: "Point, scan, done",
     description: "Your camera reads the label — fast and effortless.",
-    image: "/images/frame-1.png",
+    image: "/images/frame-3-padded.png",
   },
   {
     title: "Get clarity, not confusion",
@@ -50,7 +50,7 @@ const steps = [
   {
     title: "Watch your skin transform",
     description: "Swap smarter, stay consistent, and glow for real.",
-    image: "/images/frame-3-padded.png",
+    image: "/images/step-3.jpg",
   },
 ];
 
@@ -296,7 +296,11 @@ export default function Home() {
                     alt={step.title}
                     width={1200}
                     height={1600}
-                    className="h-auto w-full rounded-[16px] object-contain"
+                    className={`w-full rounded-[16px] ${
+                      index === 1
+                        ? "h-56 object-cover"
+                        : "h-auto object-contain"
+                    }`}
                   />
                 </div>
               </div>
