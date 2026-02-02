@@ -190,15 +190,13 @@ export default function Home() {
               Scan any skincare label. Get a clean‑to‑toxic score in seconds.
             </h1>
             <p className="text-lg text-[#2D4A3A]/80">
-              Rico AI translates ingredients, flags red‑flag irritants, and suggests
-              esthetician‑approved swaps under $30 — so you can shop with confidence.
+              Scan ingredients, avoid irritants, and get cleaner swaps — fast.
             </p>
             <div className="grid gap-3 sm:grid-cols-3">
               {[
                 "1. Scan the label",
                 "2. See your safety score",
                 "3. Swap for cleaner options",
-                "4. Track your skin habits",
               ].map((item) => (
                 <div
                   key={item}
@@ -208,6 +206,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="mt-3 text-sm text-[#2D4A3A]/70">
+              Track your skin habits and see long‑term progress.
+            </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={appStoreUrl}
@@ -225,8 +226,6 @@ export default function Home() {
             <div className="text-sm text-[#2D4A3A]/70">
               <p>Esthetician‑built guidance</p>
               <p>Under‑$30 essentials routine</p>
-              <p>Worldwide label translation</p>
-              <p>Smart habit tracking</p>
             </div>
           </div>
           <div className="relative">
