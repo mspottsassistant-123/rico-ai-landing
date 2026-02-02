@@ -167,12 +167,14 @@ export default function Home() {
               </a>
             ))}
           </nav>
-          <a
-            href={appStoreUrl}
-            className="inline-flex items-center gap-2 justify-center rounded-full border border-[#9CAF88] bg-white/90 px-4 py-2 text-xs font-semibold text-[#2D4A3A] shadow-[0_6px_20px_-14px_rgba(45,74,58,0.5)]"
-          >
-            <Image src="/images/apple-logo.svg" alt="Apple" width={14} height={14} />
-            Download now
+          <a href={appStoreUrl} className="inline-flex">
+            <Image
+              src="/images/app-store-badge.jpg"
+              alt="Download on the App Store"
+              width={150}
+              height={48}
+              className="h-10 w-auto"
+            />
           </a>
         </div>
       </header>
