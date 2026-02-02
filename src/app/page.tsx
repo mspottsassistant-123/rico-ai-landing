@@ -194,7 +194,8 @@ export default function Home() {
               {[
                 "1. Scan the label",
                 "2. See your safety score",
-                "3. See your skin transform",
+                "3. Swap for cleaner options",
+                "4. Track your skin habits",
               ].map((item) => (
                 <div
                   key={item}
