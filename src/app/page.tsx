@@ -169,8 +169,17 @@ export default function Home() {
           </nav>
           <a
             href={appStoreUrl}
-            className="inline-flex items-center justify-center rounded-full border border-[#9CAF88] bg-white/90 px-4 py-2 text-xs font-semibold text-[#2D4A3A] shadow-[0_6px_20px_-14px_rgba(45,74,58,0.5)]"
+            className="inline-flex items-center gap-2 justify-center rounded-full border border-[#9CAF88] bg-white/90 px-4 py-2 text-xs font-semibold text-[#2D4A3A] shadow-[0_6px_20px_-14px_rgba(45,74,58,0.5)]"
           >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              className="h-3.5 w-3.5"
+              fill="currentColor"
+            >
+              <path d="M16.365 1.43c0 1.14-.506 2.195-1.35 3.06-.91.93-2.41 1.63-3.66 1.52-.15-1.12.42-2.31 1.27-3.17.93-.94 2.54-1.63 3.74-1.41z" />
+              <path d="M20.02 17.9c-.74 1.72-1.09 2.49-2.06 4.02-1.34 2.08-3.24 4.67-5.6 4.7-1.88.02-2.36-1.23-4.2-1.21-1.84.02-2.36 1.24-4.24 1.22-2.36-.03-4.17-2.37-5.5-4.44C-1 16.79.2 9.06 4.9 8.96c1.88-.04 3.64 1.29 4.9 1.29 1.23 0 3.2-1.6 5.41-1.36.93.04 3.52.38 5.2 2.88-3.6 1.98-3.02 6.94.61 8.13z" />
+            </svg>
             Download now
           </a>
         </div>
