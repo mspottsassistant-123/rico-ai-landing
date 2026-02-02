@@ -93,7 +93,7 @@ const testimonials = [
   },
   {
     quote:
-      "My redness went down once I stopped guessing and followed the ingredient swaps.",
+      "My redness went down once I finally understood ingredients and made smarter swaps.",
     name: "Camila, LA",
     rating: 5,
     image: "/images/glow-client-d.jpg",
@@ -433,13 +433,13 @@ export default function Home() {
                   key={`${item.name}-${index}`}
                   className="w-[260px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
                 >
-                  <div className="relative overflow-hidden rounded-[16px]">
+                  <div className="relative overflow-hidden rounded-[16px] bg-white/80 p-2">
                     <Image
                       src={item.image}
                       alt="Client before and after"
-                      width={700}
-                      height={700}
-                      className="h-full w-full object-cover"
+                      width={1200}
+                      height={900}
+                      className="h-auto w-full object-contain"
                     />
                   </div>
                   <div className="mt-3 flex items-center gap-1 text-[#D4A574]">
