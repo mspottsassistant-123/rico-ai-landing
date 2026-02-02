@@ -96,14 +96,14 @@ const testimonials = [
       "My redness went down once I stopped guessing and followed the ingredient swaps.",
     name: "Camila, LA",
     rating: 5,
-    image: "/images/glow-client-a.jpg",
+    image: "/images/glow-client-d.jpg",
   },
   {
     quote:
       "Finally a routine that feels simple and actually works. My skin looks even now.",
     name: "Sofia, Miami",
     rating: 5,
-    image: "/images/glow-client-b.jpg",
+    image: "/images/glow-client-e.jpg",
   },
 ];
 
