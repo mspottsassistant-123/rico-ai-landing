@@ -151,7 +151,7 @@ const marqueeItems = [
   "✨ Scan. Decode. Glow.",
   "🧴 Ingredient Decoder",
   "🌿 Clean Swaps",
-  "🌍 Worldwide",
+  "🌍 108 countries (iOS)",
   "💖 Esthetician‑Built",
   "📸 Scan in Seconds",
   "🧠 AI‑Powered",
@@ -176,8 +176,8 @@ export default function Home() {
               height={44}
             />
             <div className="flex flex-col leading-none">
-              <span className="text-2xl font-semibold text-[#2D4A3A]">Rico AI</span>
-              <span className="text-[10px] uppercase tracking-[0.22em] text-[#2D4A3A]/60">
+              <span className="text-3xl sm:text-2xl font-semibold text-[#2D4A3A] whitespace-nowrap">Rico AI</span>
+              <span className="text-[10px] uppercase tracking-[0.22em] text-[#2D4A3A]/60 whitespace-nowrap">
                 Scan. Decode. Glow. ✨
               </span>
             </div>
@@ -433,9 +433,9 @@ export default function Home() {
               {[...testimonials, ...testimonials].map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
-                  className="w-[300px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
+                  className="w-[340px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
                 >
-                  <div className="relative overflow-hidden rounded-[16px] bg-white/80 p-2">
+                  <div className="relative overflow-hidden rounded-[16px]">
                     <Image
                       src={item.image}
                       alt="Client before and after"
