@@ -378,22 +378,34 @@ export default function Home() {
             </p>
             <h2 className="text-3xl font-semibold">Real results, real confidence, real transformations.</h2>
           </div>
-          <div className="mt-8 overflow-hidden">
-            <div className="review-marquee gap-6">
-              {[...testimonials, ...testimonials].map((item, index) => (
-                <div
-                  key={`${item.name}-${index}`}
-                  className="w-[260px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
-                >
-                  <div className="flex items-center gap-1 text-[#D4A574]">
-                    {Array.from({ length: item.rating }).map((_, i) => (
-                      <span key={`${item.name}-${index}-star-${i}`}>★</span>
-                    ))}
+          <div className="mt-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
+            <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-4 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]">
+              <Image
+                src="/images/glow-before-after-1.jpg"
+                alt="Before and after skin transformation"
+                width={1400}
+                height={900}
+                className="h-auto w-full rounded-[22px] object-cover"
+              />
+              <p className="mt-3 text-sm text-[#2D4A3A]/70">Before → After (real transformation)</p>
+            </div>
+            <div className="overflow-hidden">
+              <div className="review-marquee gap-6">
+                {[...testimonials, ...testimonials].map((item, index) => (
+                  <div
+                    key={`${item.name}-${index}`}
+                    className="w-[260px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
+                  >
+                    <div className="flex items-center gap-1 text-[#D4A574]">
+                      {Array.from({ length: item.rating }).map((_, i) => (
+                        <span key={`${item.name}-${index}-star-${i}`}>★</span>
+                      ))}
+                    </div>
+                    <p className="mt-3 text-[#2D4A3A]/80">“{item.quote}”</p>
+                    <p className="mt-4 text-sm font-semibold text-[#2D4A3A]">{item.name}</p>
                   </div>
-                  <p className="mt-3 text-[#2D4A3A]/80">“{item.quote}”</p>
-                  <p className="mt-4 text-sm font-semibold text-[#2D4A3A]">{item.name}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
