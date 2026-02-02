@@ -151,13 +151,14 @@ export default function Home() {
 
       <header className="sticky top-0 z-50 border-b border-white/60 bg-[#F7F3E9]/80 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-6 lg:px-10">
-          <a href="#home" className="flex items-center">
+          <a href="#home" className="flex items-center gap-2">
             <Image
               src="/images/swan-logo-sage.png"
               alt="Rico AI swan logo"
               width={44}
               height={44}
             />
+            <span className="text-sm font-semibold text-[#2D4A3A]">Rico AI</span>
           </a>
           <nav className="hidden items-center gap-6 text-sm text-[#2D4A3A]/80 md:flex">
             {nav.map((item) => (
