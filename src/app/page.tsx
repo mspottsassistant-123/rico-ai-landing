@@ -175,7 +175,10 @@ export default function Home() {
               width={44}
               height={44}
             />
-            <span className="text-xl font-semibold text-[#2D4A3A]">Rico AI</span>
+            <span className="text-2xl font-semibold text-[#2D4A3A]">Rico AI</span>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#2D4A3A]/60">
+              Scan. Decode. Glow.
+            </span>
           </a>
           <nav className="hidden items-center gap-6 text-sm text-[#2D4A3A]/80 md:flex">
             {nav.map((item) => (
