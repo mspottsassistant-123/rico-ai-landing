@@ -40,17 +40,17 @@ const steps = [
   {
     title: "Point, scan, done",
     description: "Your camera reads the label — fast and effortless.",
-    image: "/images/frame-3-padded.png",
+    image: "/images/step-1.png",
   },
   {
     title: "Get clarity, not confusion",
     description: "We translate the ingredients into a score you can trust.",
-    image: "/images/frame-2-padded.png",
+    image: "/images/step-2.png",
   },
   {
     title: "Watch your skin transform",
     description: "Swap smarter, stay consistent, and glow for real.",
-    image: "/images/step-3.jpg",
+    image: "/images/step-3.png",
   },
 ];
 
@@ -151,14 +151,14 @@ export default function Home() {
 
       <header className="sticky top-0 z-50 border-b border-white/60 bg-[#F7F3E9]/80 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-6 lg:px-10">
-          <div className="flex items-center">
+          <a href="#home" className="flex items-center">
             <Image
-              src="/images/ricoai-swan.png"
+              src="/images/swan-logo.png"
               alt="Rico AI swan logo"
               width={36}
               height={36}
             />
-          </div>
+          </a>
           <nav className="hidden items-center gap-6 text-sm text-[#2D4A3A]/80 md:flex">
             {nav.map((item) => (
               <a key={item.href} href={item.href} className="hover:text-[#2D4A3A]">
@@ -231,8 +231,8 @@ export default function Home() {
             <div className="absolute -inset-6 rounded-[40px] bg-gradient-to-br from-[#F3E9FF]/70 via-[#EAF4EE]/60 to-[#F6E8E0]/60 blur-2xl" />
             <div className="relative overflow-hidden rounded-[32px] border border-white/60 bg-transparent p-4 shadow-[0_40px_120px_-80px_rgba(45,74,58,0.5)]">
               <Image
-                src="/images/frame-1.png"
-                alt="Rico AI app screenshots"
+                src="/images/hero-mockups.png"
+                alt="Rico AI app mockups"
                 width={1600}
                 height={1200}
                 quality={100}
@@ -333,6 +333,36 @@ export default function Home() {
                 <p className="mt-3 text-[#2D4A3A]/75">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Founder */}
+        <section id="founder" className="mt-16">
+          <div className="grid gap-8 rounded-[32px] border border-white/80 bg-white/80 p-8 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:items-center">
+            <div className="relative overflow-hidden rounded-[24px]">
+              <Image
+                src="/images/founder-zee.jpg"
+                alt="Aranza (Zee), founder of Rico AI"
+                width={1200}
+                height={1600}
+                className="h-auto w-full rounded-[24px] object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
+                Meet the founder
+              </p>
+              <h2 className="mt-2 text-3xl font-semibold">Hi, I’m Zee.</h2>
+              <p className="mt-3 text-[#2D4A3A]/75">
+                I’m a holistic esthetician and health coach who built Rico AI to help
+                real people decode ingredients, avoid irritants, and find cleaner swaps
+                without the overwhelm.
+              </p>
+              <p className="mt-3 text-[#2D4A3A]/75">
+                Rico AI is for you — so you can feel confident, save money, and build a
+                routine your skin actually loves.
+              </p>
+            </div>
           </div>
         </section>
 
