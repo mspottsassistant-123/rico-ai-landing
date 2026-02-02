@@ -56,16 +56,16 @@ const steps = [
 
 const faqs = [
   {
-    q: "Is Rico AI just for skincare pros?",
-    a: "Nope. It’s built for beginners and skincare nerds alike — simple scores plus deeper ingredient breakdowns.",
+    q: "What do I get after a scan?",
+    a: "A clean‑to‑toxic score, ingredient breakdown, safer budget‑friendly swaps, and habit tracking for progress.",
   },
   {
-    q: "How accurate are the scores?",
-    a: "They’re grounded in esthetician expertise and ingredient safety research. We’re always improving with user feedback.",
+    q: "Who is Rico AI for?",
+    a: "Anyone who wants healthier skin — sensitive, acne‑prone, dry, irritated, or just seeking a cleaner routine.",
   },
   {
     q: "Is it really free to try?",
-    a: "Yes. Start with a free 3‑day trial — no credit card required.",
+    a: "Yes — start with a free trial and cancel anytime. Pricing is transparent in‑app.",
   },
 ];
 
@@ -342,7 +342,7 @@ export default function Home() {
 
         {/* Founder */}
         <section id="founder" className="mt-16">
-          <div className="grid gap-8 rounded-[32px] border border-white/80 bg-white/80 p-8 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:items-center">
+          <div className="grid gap-8 rounded-[32px] border border-white/80 bg-white/80 p-8 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:items-start">
             <div className="relative overflow-hidden rounded-[24px]">
               <Image
                 src="/images/founder-zee.jpg"
@@ -372,6 +372,32 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <div className="mt-6 grid gap-4 rounded-[28px] border border-white/70 bg-white/90 p-4 shadow-sm md:grid-cols-2">
+            <div className="relative overflow-hidden rounded-[18px]">
+              <Image
+                src="/images/glow-before.jpg"
+                alt="Zee before"
+                width={900}
+                height={1200}
+                className="h-full w-full object-cover"
+              />
+              <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                Before
+              </span>
+            </div>
+            <div className="relative overflow-hidden rounded-[18px]">
+              <Image
+                src="/images/glow-after.jpg"
+                alt="Zee after"
+                width={900}
+                height={1200}
+                className="h-full w-full object-cover"
+              />
+              <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                After
+              </span>
+            </div>
+          </div>
         </section>
 
         {/* Testimonials */}
@@ -382,62 +408,31 @@ export default function Home() {
             </p>
             <h2 className="text-3xl font-semibold">Real results, real confidence, real transformations.</h2>
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-            <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-4 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]">
-              <div className="grid grid-cols-2 gap-2">
-                <div className="relative overflow-hidden rounded-[18px]">
-                  <Image
-                    src="/images/glow-before.jpg"
-                    alt="Before skin transformation"
-                    width={900}
-                    height={1200}
-                    className="h-full w-full object-cover"
-                  />
-                  <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
-                    Before
-                  </span>
-                </div>
-                <div className="relative overflow-hidden rounded-[18px]">
-                  <Image
-                    src="/images/glow-after.jpg"
-                    alt="After skin transformation"
-                    width={900}
-                    height={1200}
-                    className="h-full w-full object-cover"
-                  />
-                  <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
-                    After
-                  </span>
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-[#2D4A3A]/70">Real transformation</p>
-            </div>
-            <div className="overflow-hidden">
-              <div className="review-marquee gap-6">
-                {[...testimonials, ...testimonials].map((item, index) => (
-                  <div
-                    key={`${item.name}-${index}`}
-                    className="w-[260px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
-                  >
-                    <div className="relative overflow-hidden rounded-[16px]">
-                      <Image
-                        src={item.image}
-                        alt="Client before and after"
-                        width={700}
-                        height={700}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <div className="mt-3 flex items-center gap-1 text-[#D4A574]">
-                      {Array.from({ length: item.rating }).map((_, i) => (
-                        <span key={`${item.name}-${index}-star-${i}`}>★</span>
-                      ))}
-                    </div>
-                    <p className="mt-3 text-[#2D4A3A]/80">“{item.quote}”</p>
-                    <p className="mt-4 text-sm font-semibold text-[#2D4A3A]">{item.name}</p>
+          <div className="mt-8">
+            <div className="review-marquee gap-6">
+              {[...testimonials, ...testimonials].map((item, index) => (
+                <div
+                  key={`${item.name}-${index}`}
+                  className="w-[260px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
+                >
+                  <div className="relative overflow-hidden rounded-[16px]">
+                    <Image
+                      src={item.image}
+                      alt="Client before and after"
+                      width={700}
+                      height={700}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
-                ))}
-              </div>
+                  <div className="mt-3 flex items-center gap-1 text-[#D4A574]">
+                    {Array.from({ length: item.rating }).map((_, i) => (
+                      <span key={`${item.name}-${index}-star-${i}`}>★</span>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-[#2D4A3A]/80">“{item.quote}”</p>
+                  <p className="mt-4 text-sm font-semibold text-[#2D4A3A]">{item.name}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
