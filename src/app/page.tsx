@@ -435,13 +435,12 @@ export default function Home() {
                   key={`${item.name}-${index}`}
                   className="w-[340px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
                 >
-                  <div className="relative overflow-hidden rounded-[16px]">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[16px] bg-white/60">
                     <Image
                       src={item.image}
                       alt="Client before and after"
-                      width={1200}
-                      height={900}
-                      className="w-full h-auto object-contain"
+                      fill
+                      className="object-contain"
                     />
                   </div>
                   <div className="mt-3 flex items-center gap-1 text-[#D4A574]">
