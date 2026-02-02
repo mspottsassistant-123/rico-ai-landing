@@ -194,7 +194,7 @@ export default function Home() {
               {[
                 "1. Scan the label",
                 "2. See your safety score",
-                "3. Swap for cleaner options",
+                "3. See your skin transform",
               ].map((item) => (
                 <div
                   key={item}
@@ -218,14 +218,11 @@ export default function Home() {
                 See how it works
               </a>
             </div>
-            <div className="flex flex-wrap gap-4 text-sm text-[#2D4A3A]/70">
-              <span>Esthetician‑built guidance</span>
-              <span>•</span>
-              <span>Under‑$30 essentials routine</span>
-              <span>•</span>
-              <span>Worldwide label translation</span>
-              <span>•</span>
-              <span>Smart habit tracking</span>
+            <div className="text-sm text-[#2D4A3A]/70">
+              <p>Esthetician‑built guidance</p>
+              <p>Under‑$30 essentials routine</p>
+              <p>Worldwide label translation</p>
+              <p>Smart habit tracking</p>
             </div>
           </div>
           <div className="relative">
@@ -381,14 +378,33 @@ export default function Home() {
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
             <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-4 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]">
-              <Image
-                src="/images/glow-before-after-1.jpg"
-                alt="Before and after skin transformation"
-                width={1400}
-                height={900}
-                className="h-auto w-full rounded-[22px] object-cover"
-              />
-              <p className="mt-3 text-sm text-[#2D4A3A]/70">Before → After (real transformation)</p>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="relative overflow-hidden rounded-[18px]">
+                  <Image
+                    src="/images/glow-before.jpg"
+                    alt="Before skin transformation"
+                    width={900}
+                    height={1200}
+                    className="h-full w-full object-cover"
+                  />
+                  <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                    Before
+                  </span>
+                </div>
+                <div className="relative overflow-hidden rounded-[18px]">
+                  <Image
+                    src="/images/glow-after.jpg"
+                    alt="After skin transformation"
+                    width={900}
+                    height={1200}
+                    className="h-full w-full object-cover"
+                  />
+                  <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                    After
+                  </span>
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-[#2D4A3A]/70">Real transformation</p>
             </div>
             <div className="overflow-hidden">
               <div className="review-marquee gap-6">
