@@ -469,8 +469,8 @@ export default function Home() {
               </p>
               <h2 className="mt-2 text-3xl font-semibold">Get early tips + feature drops.</h2>
               <p className="mt-3 text-[#2D4A3A]/75">
-                We’re a small team building Rico AI with care. Join the list for
-                skincare tips, app updates, and early access features.
+                Skin knowledge is skin confidence. Stay connected for esthetician‑approved
+                tips, ingredient education, and updates from Zee.
               </p>
             </div>
             <form className="flex flex-col gap-3 sm:flex-row">
