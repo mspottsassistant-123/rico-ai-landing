@@ -161,7 +161,7 @@ export default function Home() {
               width={44}
               height={44}
             />
-            <span className="text-sm font-semibold text-[#2D4A3A]">Rico AI</span>
+            <span className="text-base font-semibold text-[#2D4A3A]">Rico AI</span>
           </a>
           <nav className="hidden items-center gap-6 text-sm text-[#2D4A3A]/80 md:flex">
             {nav.map((item) => (
