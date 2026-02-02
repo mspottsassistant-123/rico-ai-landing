@@ -92,20 +92,17 @@ const testimonials = [
 
 const glowStories = [
   {
-    before: "/images/glow-client-1-before.jpg",
-    after: "/images/glow-client-1-after.jpg",
+    image: "/images/glow-client-a.jpg",
     story:
       "Redness and breakouts calmed down with a simple routine and cleaner swaps.",
   },
   {
-    before: "/images/glow-client-2-before.jpg",
-    after: "/images/glow-client-2-after.jpg",
+    image: "/images/glow-client-b.jpg",
     story:
       "Stubborn congestion improved once we removed irritants and focused on barrier care.",
   },
   {
-    before: "/images/glow-client-3-before.jpg",
-    after: "/images/glow-client-3-after.jpg",
+    image: "/images/glow-client-c.jpg",
     story:
       "Texture smoothed out after consistent ingredient‑safe routines and habit tracking.",
   },
@@ -408,31 +405,14 @@ export default function Home() {
                     key={`glow-${idx}`}
                     className="min-w-[240px] flex-none rounded-[20px] border border-white/60 bg-white/95 p-3"
                   >
-                    <div className="grid grid-cols-2 gap-2">
-                      <div className="relative overflow-hidden rounded-[14px]">
-                        <Image
-                          src={story.before}
-                          alt="Before skin transformation"
-                          width={700}
-                          height={900}
-                          className="h-full w-full object-cover"
-                        />
-                        <span className="absolute bottom-1 left-1 rounded-full bg-black/60 px-2 py-1 text-[9px] font-semibold uppercase tracking-wider text-white">
-                          Before
-                        </span>
-                      </div>
-                      <div className="relative overflow-hidden rounded-[14px]">
-                        <Image
-                          src={story.after}
-                          alt="After skin transformation"
-                          width={700}
-                          height={900}
-                          className="h-full w-full object-cover"
-                        />
-                        <span className="absolute bottom-1 right-1 rounded-full bg-black/60 px-2 py-1 text-[9px] font-semibold uppercase tracking-wider text-white">
-                          After
-                        </span>
-                      </div>
+                    <div className="relative overflow-hidden rounded-[14px]">
+                      <Image
+                        src={story.image}
+                        alt="Before and after skin transformation"
+                        width={900}
+                        height={900}
+                        className="h-full w-full object-cover"
+                      />
                     </div>
                     <p className="mt-3 text-xs text-[#2D4A3A]/75">{story.story}</p>
                   </div>
