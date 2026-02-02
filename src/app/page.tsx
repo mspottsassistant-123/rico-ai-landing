@@ -75,36 +75,21 @@ const testimonials = [
       "I finally understand what’s in my products — and my skin is calmer already.",
     name: "Jasmine, San Diego",
     rating: 5,
+    image: "/images/glow-client-a.jpg",
   },
   {
     quote:
       "This feels like a tiny esthetician in my pocket. I trust it more than random TikTok tips.",
     name: "Elena, NYC",
     rating: 5,
+    image: "/images/glow-client-b.jpg",
   },
   {
     quote:
       "The under‑$30 swaps are chef’s kiss. I’ve saved money and my skin loves me.",
     name: "Priya, London",
     rating: 4,
-  },
-];
-
-const glowStories = [
-  {
-    image: "/images/glow-client-a.jpg",
-    story:
-      "Redness and breakouts calmed down with a simple routine and cleaner swaps.",
-  },
-  {
-    image: "/images/glow-client-b.jpg",
-    story:
-      "Stubborn congestion improved once we removed irritants and focused on barrier care.",
-  },
-  {
     image: "/images/glow-client-c.jpg",
-    story:
-      "Texture smoothed out after consistent ingredient‑safe routines and habit tracking.",
   },
 ];
 
@@ -399,25 +384,33 @@ export default function Home() {
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
             <div className="overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-4 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]">
-              <div className="flex gap-4 overflow-x-auto pb-2">
-                {glowStories.map((story, idx) => (
-                  <div
-                    key={`glow-${idx}`}
-                    className="min-w-[240px] flex-none rounded-[20px] border border-white/60 bg-white/95 p-3"
-                  >
-                    <div className="relative overflow-hidden rounded-[14px]">
-                      <Image
-                        src={story.image}
-                        alt="Before and after skin transformation"
-                        width={900}
-                        height={900}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <p className="mt-3 text-xs text-[#2D4A3A]/75">{story.story}</p>
-                  </div>
-                ))}
+              <div className="grid grid-cols-2 gap-2">
+                <div className="relative overflow-hidden rounded-[18px]">
+                  <Image
+                    src="/images/glow-before.jpg"
+                    alt="Before skin transformation"
+                    width={900}
+                    height={1200}
+                    className="h-full w-full object-cover"
+                  />
+                  <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                    Before
+                  </span>
+                </div>
+                <div className="relative overflow-hidden rounded-[18px]">
+                  <Image
+                    src="/images/glow-after.jpg"
+                    alt="After skin transformation"
+                    width={900}
+                    height={1200}
+                    className="h-full w-full object-cover"
+                  />
+                  <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                    After
+                  </span>
+                </div>
               </div>
+              <p className="mt-3 text-sm text-[#2D4A3A]/70">Real transformation</p>
             </div>
             <div className="overflow-hidden">
               <div className="review-marquee gap-6">
@@ -426,7 +419,16 @@ export default function Home() {
                     key={`${item.name}-${index}`}
                     className="w-[260px] flex-none rounded-[28px] border border-white/70 bg-gradient-to-br from-[#F3E9FF] via-[#F7F3E9] to-[#EAF4EE] p-6 shadow-[0_16px_70px_-60px_rgba(233,215,255,0.7)]"
                   >
-                    <div className="flex items-center gap-1 text-[#D4A574]">
+                    <div className="relative overflow-hidden rounded-[16px]">
+                      <Image
+                        src={item.image}
+                        alt="Client before and after"
+                        width={700}
+                        height={700}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="mt-3 flex items-center gap-1 text-[#D4A574]">
                       {Array.from({ length: item.rating }).map((_, i) => (
                         <span key={`${item.name}-${index}-star-${i}`}>★</span>
                       ))}
