@@ -172,7 +172,7 @@ export default function Home() {
           </nav>
           <a href={appStoreUrl} className="inline-flex">
             <Image
-              src="/images/app-store-badge.jpg"
+              src="/images/app-store-badge.png"
               alt="Download on the App Store"
               width={150}
               height={48}
