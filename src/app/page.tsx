@@ -96,7 +96,7 @@ const testimonials = [
       "My redness went down once I finally understood ingredients and made smarter swaps.",
     name: "Camila, LA",
     rating: 5,
-    image: "/images/glow-client-d.jpg",
+    image: "/images/glow-client-la.jpg",
   },
   {
     quote:
