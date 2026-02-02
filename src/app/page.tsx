@@ -50,7 +50,7 @@ const steps = [
   {
     title: "Watch your skin transform",
     description: "Swap smarter, stay consistent, and glow for real.",
-    image: "/images/step-3.png",
+    image: "/images/step-3.jpg",
   },
 ];
 
@@ -153,10 +153,10 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-6 lg:px-10">
           <a href="#home" className="flex items-center">
             <Image
-              src="/images/swan-logo.png"
+              src="/images/swan-logo-sage.png"
               alt="Rico AI swan logo"
-              width={36}
-              height={36}
+              width={44}
+              height={44}
             />
           </a>
           <nav className="hidden items-center gap-6 text-sm text-[#2D4A3A]/80 md:flex">
@@ -298,7 +298,7 @@ export default function Home() {
                     height={1600}
                     className={`w-full rounded-[16px] ${
                       index === 1
-                        ? "h-56 object-cover"
+                        ? "h-72 object-cover object-center"
                         : "h-auto object-contain"
                     }`}
                   />
@@ -354,9 +354,13 @@ export default function Home() {
               </p>
               <h2 className="mt-2 text-3xl font-semibold">Hi, I’m Zee.</h2>
               <p className="mt-3 text-[#2D4A3A]/75">
-                I’m a holistic esthetician and health coach who built Rico AI to help
-                real people decode ingredients, avoid irritants, and find cleaner swaps
-                without the overwhelm.
+                I went through a tremendous amount of toxicity within myself and my
+                environment and healed the root cause of my cystic acne. That journey
+                changed everything.
+              </p>
+              <p className="mt-3 text-[#2D4A3A]/75">
+                I built Rico AI so you can decode ingredients, avoid irritants, and
+                find cleaner swaps without ever needing to sit in my treatment room.
               </p>
               <p className="mt-3 text-[#2D4A3A]/75">
                 Rico AI is for you — so you can feel confident, save money, and build a
@@ -372,7 +376,7 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
               Glow stories
             </p>
-            <h2 className="text-3xl font-semibold">Real results, real confidence.</h2>
+            <h2 className="text-3xl font-semibold">Real results, real confidence, real transformations.</h2>
           </div>
           <div className="mt-8 overflow-hidden">
             <div className="review-marquee gap-6">
@@ -511,7 +515,7 @@ I Want Glowy Skin
 
         <footer className="mt-16 flex flex-col items-center justify-between gap-4 text-sm text-[#2D4A3A]/70 md:flex-row">
           <div className="flex items-center gap-2">
-            <Image src="/images/ricoai-logo-primary.png" alt="Rico AI" width={24} height={24} />
+            <Image src="/images/swan-logo-sage.png" alt="Rico AI" width={24} height={24} />
             <span>Rico AI</span>
           </div>
           <div className="flex flex-wrap items-center gap-4">
