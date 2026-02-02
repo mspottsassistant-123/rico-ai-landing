@@ -103,5 +103,5 @@ body {
 .review-marquee {
   display: flex;
   width: max-content;
-  animation: review-marquee 32s linear infinite;
+  animation: review-marquee 21s linear infinite;
 }
