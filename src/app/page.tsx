@@ -519,10 +519,9 @@ I Want Glowy Skin
             <span>Rico AI</span>
           </div>
           <div className="flex flex-wrap items-center gap-4">
-            <a href="https://www.instagram.com/holisticzee/" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://www.youtube.com/@HolisticZee" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">YouTube</a>
-            <a href="https://www.tiktok.com/@_holisticzee" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">TikTok</a>
-            <a href="#" className="hover:text-[#2D4A3A]">Pinterest</a>
+            <a href="https://bit.ly/rico-ig" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://bit.ly/rico-yt" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://bit.ly/rico-tt" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">TikTok</a>
           </div>
           <p>Rico AI made with love 💜</p>
         </footer>
