@@ -228,7 +228,8 @@ export default function Home() {
             </div>
             <div className="text-sm text-[#2D4A3A]/70">
               <p>Esthetician‑built guidance</p>
-              <p>Under‑$30 essentials routine</p>
+              <p>Budget‑friendly swaps (under ~$30 per product)</p>
+              <p>Less‑is‑more ingredients that actually work</p>
             </div>
           </div>
           <div className="relative">
