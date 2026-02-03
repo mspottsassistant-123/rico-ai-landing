@@ -393,25 +393,23 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-6 grid gap-4 rounded-[28px] border border-white/70 bg-white/90 p-4 shadow-sm md:grid-cols-2">
-            <div className="relative overflow-hidden rounded-[18px]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[18px] bg-white/60">
               <Image
                 src="/images/glow-before.jpg"
                 alt="Zee before"
-                width={900}
-                height={1200}
-                className="h-full w-full object-cover"
+                fill
+                className="object-contain"
               />
               <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
                 Before
               </span>
             </div>
-            <div className="relative overflow-hidden rounded-[18px]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[18px] bg-white/60">
               <Image
                 src="/images/glow-after.jpg"
                 alt="Zee after"
-                width={900}
-                height={1200}
-                className="h-full w-full object-cover"
+                fill
+                className="object-contain"
               />
               <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
                 After
