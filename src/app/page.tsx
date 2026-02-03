@@ -159,7 +159,7 @@ const marqueeItems = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F7F3E9] text-[#2D4A3A]">
+    <div className="min-h-screen overflow-x-hidden bg-[#F7F3E9] text-[#2D4A3A]">
       <div className="pointer-events-none fixed inset-0 -z-10">
         <div className="absolute left-1/2 top-[-160px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#E9D7FF] blur-[160px]" />
         <div className="absolute right-[-120px] top-[160px] h-[360px] w-[360px] rounded-full bg-[#F8C9D7] blur-[160px]" />
@@ -201,7 +201,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl px-5 pb-24 pt-10 sm:px-6 lg:px-10">
+      <main className="mx-auto w-full max-w-6xl overflow-x-hidden px-5 pb-24 pt-10 sm:px-6 lg:px-10">
         {/* Hero */}
         <section id="home" className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-6">
