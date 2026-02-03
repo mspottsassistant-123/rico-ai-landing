@@ -398,7 +398,7 @@ export default function Home() {
                 src="/images/glow-before.jpg"
                 alt="Zee before"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
               <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
                 Before
@@ -409,7 +409,7 @@ export default function Home() {
                 src="/images/glow-after.jpg"
                 alt="Zee after"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
               <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
                 After
