@@ -105,6 +105,13 @@ const testimonials = [
     rating: 5,
     image: "/images/glow-client-sofia.jpg",
   },
+  {
+    quote:
+      "My inflammation is way down and my skin tone finally looks even.",
+    name: "Maya, Austin",
+    rating: 5,
+    image: "/images/glow-client-5.jpg",
+  },
 ];
 
 const blogPosts = [
