@@ -18,6 +18,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://ricoai.app",
   },
+  keywords: [
+    "skincare ingredient scanner",
+    "clean skincare",
+    "ingredient decoder",
+    "clean-to-toxic score",
+    "skincare routine",
+    "acne-safe products",
+    "Rico AI",
+  ],
   openGraph: {
     title: "Rico AI — Skincare Ingredient Scanner",
     description:
@@ -25,12 +34,21 @@ export const metadata: Metadata = {
     url: "https://ricoai.app",
     siteName: "Rico AI",
     type: "website",
+    images: [
+      {
+        url: "/images/hero-mockups.png",
+        width: 1200,
+        height: 630,
+        alt: "Rico AI app preview",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Rico AI — Skincare Ingredient Scanner",
     description:
       "Scan labels, get glow scores, and find cleaner swaps—fast.",
+    images: ["/images/hero-mockups.png"],
   },
 };
 
@@ -61,6 +79,41 @@ export default function RootLayout({
               downloadUrl: appStoreUrl,
               description:
                 "AI skincare ingredient scanner. Scan any product, get clean-to-toxic scores, and discover gentle swaps under $30.",
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What do I get after a scan?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "A clean-to-toxic score, ingredient breakdown, safer budget-friendly swaps, and habit tracking for progress.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Who is Rico AI for?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Anyone who wants healthier skin — sensitive, acne-prone, dry, irritated, or just seeking a cleaner routine.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Is it really free to try?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes — start with a free trial and cancel anytime. Pricing is transparent in-app.",
+                  },
+                },
+              ],
             }),
           }}
         />
