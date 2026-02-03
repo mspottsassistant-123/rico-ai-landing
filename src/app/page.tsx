@@ -103,13 +103,6 @@ const testimonials = [
       "Finally a routine that feels simple and actually works. My skin looks even now.",
     name: "Sofia, Miami",
     rating: 5,
-    image: "/images/glow-client-sofia.jpg",
-  },
-  {
-    quote:
-      "My inflammation is way down and my skin tone finally looks even.",
-    name: "Maya, Austin",
-    rating: 5,
     image: "/images/glow-client-5.jpg",
   },
 ];
