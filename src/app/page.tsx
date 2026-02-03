@@ -392,8 +392,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="mt-6 grid gap-4 rounded-[28px] border border-white/70 bg-white/90 p-4 shadow-sm md:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[18px] bg-white/60">
+          <div className="mt-6 grid grid-cols-2 gap-3 rounded-[28px] border border-white/70 bg-white/90 p-4 shadow-sm">
+            <div className="relative aspect-square overflow-hidden rounded-[18px] bg-white/60">
               <Image
                 src="/images/glow-before.jpg"
                 alt="Zee before"
@@ -404,7 +404,7 @@ export default function Home() {
                 Before
               </span>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[18px] bg-white/60">
+            <div className="relative aspect-square overflow-hidden rounded-[18px] bg-white/60">
               <Image
                 src="/images/glow-after.jpg"
                 alt="Zee after"
