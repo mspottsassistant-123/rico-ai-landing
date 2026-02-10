@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import CookieConsent from "@/components/consent/CookieConsent";
+import ConsentScripts from "@/components/analytics/ConsentScripts";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -61,6 +63,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} antialiased overflow-x-hidden`}>
         {children}
+        <CookieConsent />
+        <ConsentScripts />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
