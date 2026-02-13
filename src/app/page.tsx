@@ -8,7 +8,7 @@ const nav = [
   { label: "How it works", href: "#how" },
   { label: "Features", href: "#features" },
   { label: "Glow stories", href: "#glow" },
-  { label: "Blog", href: "#blog" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "#faq" },
   { label: "Download", href: "#download" },
 ];
@@ -110,38 +110,38 @@ const testimonials = [
 const blogPosts = [
   {
     title: "Why Your Moisturizer Has More Ingredients Than Dinner",
-    link: "https://www.ricoai.app/blogs/holisticzee-blog/why-your-moisturizer-has-more-ingredients-than-dinner-rico-ai",
+    link: "/blog/why-your-moisturizer-has-more-ingredients-than-dinner",
     image: "https://www.ricoai.app/cdn/shop/articles/Frame_1948755304.jpg?v=1767736048",
     readTime: "2–3 min read",
   },
   {
     title: "The Hidden Truth About Skincare Ingredients (Less Is More)",
-    link: "https://www.ricoai.app/blogs/holisticzee-blog/the-hidden-truth-about-your-skincare-ingredients-why-less-really-is-more",
+    link: "/blog/the-hidden-truth-about-your-skincare-ingredients",
     image: "https://www.ricoai.app/cdn/shop/articles/Frame_1948755295.webp?v=1762276998",
     readTime: "2–3 min read",
   },
   {
     title: "Niacinamide: Why This Vitamin B3 Works for Every Skin Type",
-    link: "https://www.ricoai.app/blogs/holisticzee-blog/ingredient-breakdown-the-truth-about-niacinamide-why-this-vitamin-b3-powerhouse-works-for-every-skin-type",
+    link: "/blog/ingredient-breakdown-niacinamide",
     image:
       "https://www.ricoai.app/cdn/shop/articles/ingredient-breakdown-of-niacinamide-serum-closeup-ingredient-pretty-asthetic-ugc-style-vibes-beautiful-landscape-of-niacinamide-orgin_9cf4a5fe-1cd0-4ba4-b831-1c3403da4b59.png?v=1767740735",
     readTime: "2–3 min read",
   },
   {
     title: "Why Mineral Sunscreen Matters (Badger Difference)",
-    link: "https://www.ricoai.app/blogs/holisticzee-blog/why-mineral-sunscreen-matters-holistic-esthetician-explains-the-badger-difference",
+    link: "/blog/why-mineral-sunscreen-matters",
     image: "https://www.ricoai.app/cdn/shop/articles/badgers-sunscreen-in-summery-background.png?v=1767741051",
     readTime: "2–3 min read",
   },
   {
     title: "The Complete Guide to Clean Skincare",
-    link: "https://www.ricoai.app/blogs/holisticzee-blog/the-complete-guide-to-clean-skincare-scan-decode-and-glow-with-rico-ai",
+    link: "/blog/the-complete-guide-to-clean-skincare",
     image: "/images/frame-1.png",
     readTime: "2–3 min read",
   },
   {
     title: "Nighttime Skincare Routine: Step‑by‑Step",
-    link: "https://www.ricoai.app/blogs/holisticzee-blog/nighttime-skincare-routine-step-by-step-guide-with-rico-ai",
+    link: "/blog/nighttime-skincare-routine",
     image: "/images/frame-2-padded.png",
     readTime: "2–3 min read",
   },
@@ -493,7 +493,7 @@ export default function Home() {
           </div>
           <div className="mt-6">
             <a
-              href="https://www.ricoai.app/blogs/holisticzee-blog"
+              href="/blog"
               className="glass-button inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold text-[#2D4A3A]"
               target="_blank"
               rel="noreferrer"
