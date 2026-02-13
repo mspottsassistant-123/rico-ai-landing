@@ -1,8 +1,9 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { posts } from "../posts";
 
 function renderInline(text: string) {
-  const parts: Array<string | JSX.Element> = [];
+  const parts: Array<string | ReactNode> = [];
   let remaining = text;
   const linkRe = /\[([^\]]+)\]\(([^)]+)\)/;
   let match;
