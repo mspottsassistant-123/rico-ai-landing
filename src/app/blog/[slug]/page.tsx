@@ -77,6 +77,20 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <p className="text-xs text-[#6D5A8E] mt-6">{post.date}</p>
         <h1 className="text-3xl md:text-5xl font-semibold mt-2 text-[#31224F]">{post.title}</h1>
         <div className="mt-6">{renderBlocks(post.content)}</div>
+
+        <div className="mt-10 pt-6 border-t border-[#B18AFF]/30">
+          <p className="text-sm text-[#4A3B63]">
+            <strong>By Aranza Osorio</strong> — CEO, Expert Holistic Esthetician, IIN Health Coach, Nutritionist
+          </p>
+          <a
+            href="https://bit.ly/4qO4Kc7"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mt-4 text-[#7A4AB9] font-semibold underline"
+          >
+            Download Rico AI on the App Store
+          </a>
+        </div>
       </div>
     </main>
   );

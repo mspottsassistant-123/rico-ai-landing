@@ -130,7 +130,14 @@ The integration of artificial intelligence with expert knowledge creates a power
 
 One of the biggest misconceptions in skincare is that effective products must be expensive. Some of the most beneficial ingredients—like niacinamide, glycerin, and ceramides—are relatively inexpensive to produce. The high cost of many skincare products often comes from packaging, marketing, and brand positioning rather than ingredient quality.
 
-When you understand ingredients, you can identify effective products at every price point. A well-formulated drugstore moisturizer with quality ceramides and hyaluronic acid can out`,
+When you understand ingredients, you can identify effective products at every price point. A well-formulated drugstore moisturizer with quality ceramides and hyaluronic acid can outperform a luxury product packed with fillers and fragrance.
+
+The future of skincare is intelligent simplicity: fewer products, cleaner ingredients, and routines matched to your real skin needs.
+
+If you want help making those choices in seconds, start here:
+[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+
+Your skin deserves clarity, not confusion. And you deserve tools that make healthy choices easy.`,
   },
   {
     slug: "ingredient-breakdown-niacinamide",
@@ -203,7 +210,14 @@ The app's safety analysis ensures you're not paying premium prices for products 
 
 One of my most memorable client transformations involved Maria, a 34-year-old with combination skin who had spent over $300 on various niacinamide products without seeing results. When we analyzed her routine, we discovered she was using a 10% concentration (too high for her skin type) combined with several products containing ingredients that competed with or neutralized the niacinamide's effectiveness.
 
-We simplified her routine to include one well-formulated 5% niacinamide serum that cost $18. Within six weeks, her skin tone had evened out significantly, her pores appeared smaller, and her previous oiliness was replaced by a healthy, balanced glow. The key wasn'`,
+We simplified her routine to include one well-formulated 5% niacinamide serum that cost $18. Within six weeks, her skin tone had evened out significantly, her pores appeared smaller, and her previous oiliness was replaced by a healthy, balanced glow. The key wasn't more products — it was the right concentration, less irritation, and consistency.
+
+Niacinamide works beautifully when your routine is simple and your barrier is protected.
+
+Want Rico AI to check your ingredient list and recommend cleaner swaps in seconds?
+[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+
+Glow is not about doing more. It's about doing what actually works for your skin.`,
   },
   {
     slug: "why-mineral-sunscreen-matters",
@@ -257,7 +271,14 @@ One of the biggest barriers to mineral sunscreen adoption has been the notorious
 
 Modern mineral sunscreen technology has evolved through several innovations that dramatically improve wearability. Micronized and nano-sized zinc oxide particles scatter visible light differently than traditional particles, reducing the white appearance while maintaining UV protection. Clear zinc oxide has become increasingly available, using transparent zinc technology that provides broad-spectrum protection without visible residue.
 
-Tinted mineral sunscreens represent another breakthrough, offering sheer coverage that blends across diverse skin tones while providing bo`,
+Tinted mineral sunscreens represent another breakthrough, offering sheer coverage that blends across diverse skin tones while providing both cosmetic elegance and reliable broad-spectrum protection.
+
+Bottom line: if your sunscreen is irritating your skin, you won't wear it consistently. Mineral options make daily protection easier, especially for sensitive and acne-prone skin.
+
+If you want fast ingredient clarity before you buy your next SPF:
+[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+
+Protecting your skin barrier today is one of the most powerful anti-aging decisions you can make.`,
   },
   {
     slug: "the-complete-guide-to-clean-skincare",
@@ -423,6 +444,22 @@ Also, some ingredients don't play well together. Like, don't use retinol and str
 
 ## Step 5: Moisturize (Yes, Even If You Have Oily Skin!)
 
-Now, while you`,
+Now, while your skin is still slightly damp, lock everything in with a simple moisturizer. Oily skin still needs hydration — skipping moisturizer often makes oiliness worse because your skin overcompensates.
+
+At night, your moisturizer acts like a comfort blanket for your skin barrier while your skin repairs itself.
+
+## Final Night Routine Reminder
+
+Your best nighttime routine is the one you can repeat consistently:
+- gentle cleanse
+- one treatment (only if needed)
+- moisturizer
+
+Simple routines create long-term glow.
+
+If you want help scanning ingredients and building a cleaner nighttime routine in seconds:
+[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+
+Your future skin will thank you.`,
   },
 ];
