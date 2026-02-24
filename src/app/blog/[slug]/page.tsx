@@ -122,7 +122,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {(CTA_BY_SLUG[post.slug]?.line) || "If this gave you clarity, take the next step now: scan one product and choose with confidence."}
           </p>
           <a
-            href="https://bit.ly/4qO4Kc7"
+            href="https://apps.apple.com/us/app/rico-ai-skincare-scanner/id6741412208"
             target="_blank"
             rel="noreferrer"
             className="inline-block mt-4 rounded-full border border-[#B18AFF] bg-[#F7F3E9] px-5 py-2 font-semibold text-[#7A4AB9]"

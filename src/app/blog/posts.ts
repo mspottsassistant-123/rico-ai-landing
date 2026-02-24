@@ -135,7 +135,7 @@ When you understand ingredients, you can identify effective products at every pr
 The future of skincare is intelligent simplicity: fewer products, cleaner ingredients, and routines matched to your real skin needs.
 
 If you want help making those choices in seconds, start here:
-[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+[Download Rico AI on the App Store](https://apps.apple.com/us/app/rico-ai-skincare-scanner/id6741412208)
 
 Your skin deserves clarity, not confusion. And you deserve tools that make healthy choices easy.`,
   },
@@ -215,7 +215,7 @@ We simplified her routine to include one well-formulated 5% niacinamide serum th
 Niacinamide works beautifully when your routine is simple and your barrier is protected.
 
 Want Rico AI to check your ingredient list and recommend cleaner swaps in seconds?
-[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+[Download Rico AI on the App Store](https://apps.apple.com/us/app/rico-ai-skincare-scanner/id6741412208)
 
 Glow is not about doing more. It's about doing what actually works for your skin.`,
   },
@@ -276,7 +276,7 @@ Tinted mineral sunscreens represent another breakthrough, offering sheer coverag
 Bottom line: if your sunscreen is irritating your skin, you won't wear it consistently. Mineral options make daily protection easier, especially for sensitive and acne-prone skin.
 
 If you want fast ingredient clarity before you buy your next SPF:
-[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+[Download Rico AI on the App Store](https://apps.apple.com/us/app/rico-ai-skincare-scanner/id6741412208)
 
 Protecting your skin barrier today is one of the most powerful anti-aging decisions you can make.`,
   },
@@ -458,7 +458,7 @@ Your best nighttime routine is the one you can repeat consistently:
 Simple routines create long-term glow.
 
 If you want help scanning ingredients and building a cleaner nighttime routine in seconds:
-[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+[Download Rico AI on the App Store](https://apps.apple.com/us/app/rico-ai-skincare-scanner/id6741412208)
 
 Your future skin will thank you.`,
   },

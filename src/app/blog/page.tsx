@@ -67,7 +67,7 @@ export default function BlogIndex() {
             Don’t just read — apply one insight today and scan one product before checkout.
           </p>
           <a
-            href="https://bit.ly/4qO4Kc7"
+            href="https://apps.apple.com/us/app/rico-ai-skincare-scanner/id6741412208"
             target="_blank"
             rel="noreferrer"
             className="inline-block mt-3 rounded-full border border-[#B18AFF] bg-[#F7F3E9] px-4 py-2 text-sm font-semibold text-[#7A4AB9]"
