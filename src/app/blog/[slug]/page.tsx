@@ -75,7 +75,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <div className="max-w-3xl mx-auto rounded-2xl bg-white/72 border border-[#B18AFF]/35 shadow-[0_16px_38px_rgba(122,74,185,0.16)] p-6 md:p-10 backdrop-blur-sm">
         <Link href="/blog" className="text-[#7A4AB9] font-medium">← Back to blog</Link>
         <p className="text-xs text-[#6D5A8E] mt-6">{post.date}</p>
-        <h1 className="text-3xl md:text-5xl font-semibold mt-2 text-[#31224F]">{post.title}</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-[2.9rem] leading-tight font-semibold mt-2 text-[#31224F]">{post.title}</h1>
 
         <div className="mt-6 rounded-2xl border border-[#B18AFF]/35 bg-white/70 p-4 md:p-5">
           <p className="text-xs uppercase tracking-wider text-[#7A4AB9]">Before you read</p>
