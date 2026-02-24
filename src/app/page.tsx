@@ -710,10 +710,10 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-16 flex flex-col items-center justify-between gap-4 text-sm text-[#2D4A3A]/70 md:flex-row">
-          <div className="flex items-center gap-2">
-            <Image src="/images/swan-logo-sage.png" alt="Rico AI" width={24} height={24} />
-            <span>Rico AI</span>
+        <footer className="mt-16 flex flex-col items-center justify-between gap-4 text-[#2D4A3A]/70 md:flex-row">
+          <div className="flex items-center gap-3">
+            <Image src="/images/swan-logo-sage.png" alt="Rico AI" width={48} height={48} />
+            <span className="text-base font-semibold md:text-lg">Rico AI</span>
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <a
@@ -759,7 +759,7 @@ export default function Home() {
               <span className="text-xs font-semibold">TikTok</span>
             </a>
           </div>
-          <p>Rico AI made with love 💜</p>
+          <p className="text-base font-medium md:text-lg">Rico AI made with love 💜</p>
         </footer>
       </main>
     </div>
