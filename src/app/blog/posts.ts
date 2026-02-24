@@ -64,7 +64,17 @@ What I'm giving you is the tool to make informed choices. Rico AI is your lights
 
 Because the truth is, you already knew something was off. You already knew that forty-seven-ingredient moisturizer felt wrong. You already knew your skin deserved better. You just needed someone to validate that intuition and give you a clear path forward.
 
-So here it is. Your path forward is simple. Scan any product with Rico AI. Get your clean-to-toxic score in three seconds. See your minimal-ingredient alternatives under thirty dollars. Buy them directly`,
+So here it is. Your path forward is simple. Scan any product with Rico AI. Get your clean-to-toxic score in three seconds. See your minimal-ingredient alternatives under thirty dollars. Buy them directly in-app, with clean recommendations curated for your skin goals.
+
+If you’re ready to stop guessing, start here:
+[Download Rico AI on the App Store](https://bit.ly/4qO4Kc7)
+
+Your glow doesn’t need perfect products. It needs informed choices, consistency, and a routine that respects your skin barrier.
+
+I built Rico AI to make that easy.
+
+With love,
+Zee`,
   },
   {
     slug: "the-hidden-truth-about-your-skincare-ingredients",
