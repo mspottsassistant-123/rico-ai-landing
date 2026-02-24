@@ -172,17 +172,23 @@ const skinTypePaths = [
 
 const missionFlow = [
   {
-    title: "Discover",
-    description: "Learn one practical ingredient truth from Rico content across TikTok, Instagram, YouTube, or the blog.",
+    title: "Feel seen",
+    description: "You realize your skin isn’t ‘random’ — it’s reacting to ingredients you can now decode.",
   },
   {
-    title: "Decide",
-    description: "Download Rico AI on iOS and scan your product label to get your Skin Safe Score.",
+    title: "Get clarity in 60 seconds",
+    description: "Download Rico AI on iOS, scan one label, and instantly see your Skin Safe Score.",
   },
   {
-    title: "Glow",
-    description: "Follow your cleaner routine consistently and improve skin confidence over time.",
+    title: "Stack tiny wins",
+    description: "Make one cleaner swap at a time and build the glow routine you can actually sustain.",
   },
+];
+
+const ceoQuestions = [
+  "Does this page make someone say: ‘this is exactly me’ in 5 seconds?",
+  "Does every section reduce fear and make the next action feel easy?",
+  "Does this move people toward trial intent, not just curiosity?",
 ];
 
 export default function Home() {
@@ -448,19 +454,26 @@ export default function Home() {
 
         {/* Mission flow */}
         <section className="mt-16 rounded-[32px] border border-white/70 bg-white/80 px-6 py-10 shadow-sm sm:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
-              Rico AI mission flow
+              How we think like Rico AI CEOs
             </p>
-            <h2 className="mt-2 text-3xl font-semibold">Our ecosystem is multi-channel, but the landing page has one job: app downloads.</h2>
+            <h2 className="mt-2 text-3xl font-semibold">We use short-form to spark curiosity, then this page turns that emotion into a first scan.</h2>
             <p className="mt-3 text-[#2D4A3A]/75">
-              We grow organically across many channels, then bring people here to do one clear action: download Rico AI on iOS and scan their first product.
+              This is our brain-dump-to-execution framework: psychology first, clarity second, conversion always.
             </p>
+            <div className="mt-4 grid gap-2 md:grid-cols-3">
+              {ceoQuestions.map((q) => (
+                <div key={q} className="rounded-xl border border-[#2D4A3A]/10 bg-white/85 px-3 py-2 text-xs font-medium text-[#2D4A3A]/80">
+                  {q}
+                </div>
+              ))}
+            </div>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {missionFlow.map((item, idx) => (
               <div key={item.title} className="rounded-2xl border border-[#2D4A3A]/10 bg-white/85 p-5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#2D4A3A]/60">Step {idx + 1}</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#2D4A3A]/60">Move {idx + 1}</p>
                 <h3 className="mt-2 text-base font-semibold text-[#2D4A3A]">{item.title}</h3>
                 <p className="mt-2 text-sm text-[#2D4A3A]/75">{item.description}</p>
               </div>
