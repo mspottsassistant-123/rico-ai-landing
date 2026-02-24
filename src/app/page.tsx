@@ -170,24 +170,18 @@ const skinTypePaths = [
   { title: "Dark Spots", hint: "Find gentler brightening options" },
 ];
 
-const ecosystemPillars = [
+const missionFlow = [
   {
-    title: "Daily short-form education",
-    description: "Practical ingredient breakdowns for real skin concerns, posted every day.",
-    cta: "Follow on TikTok",
-    href: "https://www.tiktok.com/@ricoai_",
+    title: "Discover",
+    description: "Learn one practical ingredient truth from Rico content across TikTok, Instagram, YouTube, or the blog.",
   },
   {
-    title: "Founder-led skin coaching",
-    description: "Bestie-style skincare guidance, proof-first routines, and transparent learnings.",
-    cta: "Follow on Instagram",
-    href: "https://www.instagram.com/ricoai.app/",
+    title: "Decide",
+    description: "Download Rico AI on iOS and scan your product label to get your Skin Safe Score.",
   },
   {
-    title: "Longer-form glow library",
-    description: "YouTube Shorts + blog tutorials to help you build a cleaner routine that lasts.",
-    cta: "Watch on YouTube",
-    href: "https://www.youtube.com/@RICO-AI-APP",
+    title: "Glow",
+    description: "Follow your cleaner routine consistently and improve skin confidence over time.",
   },
 ];
 
@@ -452,30 +446,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Organic ecosystem */}
+        {/* Mission flow */}
         <section className="mt-16 rounded-[32px] border border-white/70 bg-white/80 px-6 py-10 shadow-sm sm:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
-              Rico AI mission ecosystem
+              Rico AI mission flow
             </p>
-            <h2 className="mt-2 text-3xl font-semibold">One mission, one ecosystem: help people scan smarter and glow naturally.</h2>
+            <h2 className="mt-2 text-3xl font-semibold">Our ecosystem is multi-channel, but the landing page has one job: app downloads.</h2>
             <p className="mt-3 text-[#2D4A3A]/75">
-              Rico AI grows organically by teaching, proving, and guiding every day — from short videos to blog education to in-app action.
+              We grow organically across many channels, then bring people here to do one clear action: download Rico AI on iOS and scan their first product.
             </p>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {ecosystemPillars.map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-2xl border border-[#2D4A3A]/10 bg-white/85 p-5 transition hover:-translate-y-0.5 hover:border-[#9CAF88]"
-              >
-                <h3 className="text-base font-semibold text-[#2D4A3A]">{item.title}</h3>
+            {missionFlow.map((item, idx) => (
+              <div key={item.title} className="rounded-2xl border border-[#2D4A3A]/10 bg-white/85 p-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#2D4A3A]/60">Step {idx + 1}</p>
+                <h3 className="mt-2 text-base font-semibold text-[#2D4A3A]">{item.title}</h3>
                 <p className="mt-2 text-sm text-[#2D4A3A]/75">{item.description}</p>
-                <span className="mt-4 inline-flex text-sm font-semibold text-[#2D4A3A]">{item.cta} →</span>
-              </a>
+              </div>
             ))}
           </div>
         </section>
