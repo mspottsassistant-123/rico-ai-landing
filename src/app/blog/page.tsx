@@ -25,8 +25,8 @@ export default function BlogIndex() {
               <p className="text-xs text-[#6D5A8E]">{post.date}</p>
               <h2 className="text-xl font-semibold mt-2 text-[#2F2544]">{post.title}</h2>
               <p className="text-[#4A3B63] mt-2">{post.excerpt}</p>
-              <Link href={`/blog/${post.slug}`} className="inline-block mt-4 text-[#7A4AB9] font-medium">
-                Read article →
+              <Link href={`/blog/${post.slug}`} className="inline-block mt-4 text-[#7A4AB9] font-semibold">
+                Read + apply in 60s →
               </Link>
             </article>
           ))}
