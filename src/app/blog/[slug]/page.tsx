@@ -49,8 +49,14 @@ function renderBlocks(content: string) {
   });
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug);
+export async function generateStaticParams() {
+  return posts.map((p) => ({ slug: p.slug }));
+}
+
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const normalized = decodeURIComponent(slug || "");
+  const post = posts.find((p) => p.slug === normalized);
   if (!post) {
     return (
       <main className="min-h-screen bg-[#0B0B0F] text-white px-6 py-16">
