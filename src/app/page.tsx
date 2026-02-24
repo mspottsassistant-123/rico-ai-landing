@@ -158,7 +158,7 @@ const marqueeItems = [
 ];
 
 const proofBadges = [
-  "⭐️ 4.8 average user love",
+  "💬 Loved by ingredient-conscious users",
   "🧾 Real ingredient label scans",
   "👩🏽‍⚕️ Built by a licensed esthetician",
 ];
@@ -213,6 +213,23 @@ export default function Home() {
           </a>
         </div>
       </header>
+
+      <div className="sticky top-[73px] z-40 border-b border-white/60 bg-[#F7F3E9]/85 px-5 py-2 backdrop-blur-xl md:hidden">
+        <div className="mx-auto flex w-full max-w-6xl gap-2">
+          <a
+            href={appStoreUrl}
+            className="neon-ring glass-button inline-flex flex-1 items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-[#2D4A3A]"
+          >
+            Download iOS App
+          </a>
+          <a
+            href="#how"
+            className="glass-button inline-flex flex-1 items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-[#2D4A3A]"
+          >
+            How it works
+          </a>
+        </div>
+      </div>
 
       <main className="mx-auto w-full max-w-6xl overflow-x-hidden px-5 pb-24 pt-10 sm:px-6 lg:px-10">
         {/* Hero */}
@@ -630,8 +647,17 @@ export default function Home() {
               href={appStoreUrl}
               className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
-Download Rico AI on App Store (iOS)
+              Download Rico AI on App Store (iOS)
             </a>
+          </div>
+          <div className="mt-3 flex justify-center">
+            <Image
+              src="/images/app-store-badge.png"
+              alt="Download on the App Store"
+              width={165}
+              height={50}
+              className="h-10 w-auto"
+            />
           </div>
         </section>
 
