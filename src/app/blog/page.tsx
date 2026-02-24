@@ -11,37 +11,37 @@ const BLOG_META: Record<
   { image: string; tag: string; outcome: string; cta: string }
 > = {
   "why-your-moisturizer-has-more-ingredients-than-dinner": {
-    image: "/images/step-1.png",
+    image: "/images/blog-cards/moisturizer.jpg",
     tag: "Ingredient labels",
     outcome: "Learn how to spot fillers fast",
     cta: "Decode labels now",
   },
   "the-hidden-truth-about-your-skincare-ingredients": {
-    image: "/images/frame-1.png",
+    image: "/images/blog-cards/hidden-truth.jpg",
     tag: "Clean routine",
     outcome: "Cut product overload",
     cta: "Build a simpler routine",
   },
   "ingredient-breakdown-niacinamide": {
-    image: "/images/step-2.png",
+    image: "/images/blog-cards/niacinamide.jpg",
     tag: "Ingredient breakdown",
     outcome: "Use niacinamide correctly",
     cta: "Use niacinamide smarter",
   },
   "why-mineral-sunscreen-matters": {
-    image: "/images/step-3.png",
+    image: "/images/blog-cards/mineral-sunscreen.jpg",
     tag: "SPF education",
     outcome: "Choose barrier-safe sunscreen",
     cta: "Pick better SPF",
   },
   "the-complete-guide-to-clean-skincare": {
-    image: "/images/frame-2.webp",
+    image: "/images/blog-cards/clean-skincare.jpg",
     tag: "Clean skincare",
     outcome: "Create your simple glow system",
     cta: "Start your clean routine",
   },
   "nighttime-skincare-routine": {
-    image: "/images/frame-3.webp",
+    image: "/images/blog-cards/night-routine.jpg",
     tag: "Night routine",
     outcome: "Repair skin while you sleep",
     cta: "Fix your PM routine",
