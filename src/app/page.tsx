@@ -406,11 +406,7 @@ export default function Home() {
                     alt={step.title}
                     width={1200}
                     height={1600}
-                    className={`w-full rounded-[16px] ${
-                      index === 1
-                        ? "h-72 object-cover object-center"
-                        : "h-auto object-contain"
-                    }`}
+                    className="h-[460px] w-full rounded-[16px] object-cover object-center"
                   />
                 </div>
               </div>
