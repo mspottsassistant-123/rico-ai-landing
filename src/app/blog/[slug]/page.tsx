@@ -59,7 +59,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const post = posts.find((p) => p.slug === normalized);
   if (!post) {
     return (
-      <main className="min-h-screen px-6 py-16 text-[#2F2544] bg-[radial-gradient(900px_520px_at_90%_-10%,rgba(177,138,255,0.35),transparent_55%),radial-gradient(700px_420px_at_8%_8%,rgba(122,74,185,0.18),transparent_50%),linear-gradient(135deg,#F7F3E9_0%,#F3ECFA_55%,#EEE6F8_100%)]">
+      <main className="min-h-screen px-6 py-16 text-[#2F2544] bg-[radial-gradient(900px_520px_at_90%_-10%,rgba(177,138,255,0.28),transparent_55%),radial-gradient(760px_420px_at_10%_8%,rgba(168,226,216,0.22),transparent_52%),linear-gradient(135deg,#F7F3E9_0%,#EEF8F4_48%,#F1EAFB_100%)]">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-2xl font-semibold">Post not found</h1>
           <Link href="/blog" className="text-[#7A4AB9] inline-block mt-4 font-medium">
@@ -71,7 +71,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <main className="min-h-screen px-6 py-16 text-[#2F2544] bg-[radial-gradient(900px_520px_at_90%_-10%,rgba(177,138,255,0.35),transparent_55%),radial-gradient(700px_420px_at_8%_8%,rgba(122,74,185,0.18),transparent_50%),linear-gradient(135deg,#F7F3E9_0%,#F3ECFA_55%,#EEE6F8_100%)]">
+    <main className="min-h-screen px-6 py-16 text-[#2F2544] bg-[radial-gradient(900px_520px_at_90%_-10%,rgba(177,138,255,0.28),transparent_55%),radial-gradient(760px_420px_at_10%_8%,rgba(168,226,216,0.22),transparent_52%),linear-gradient(135deg,#F7F3E9_0%,#EEF8F4_48%,#F1EAFB_100%)]">
       <div className="max-w-3xl mx-auto rounded-2xl bg-white/72 border border-[#B18AFF]/35 shadow-[0_16px_38px_rgba(122,74,185,0.16)] p-6 md:p-10 backdrop-blur-sm">
         <Link href="/blog" className="text-[#7A4AB9] font-medium">← Back to blog</Link>
         <p className="text-xs text-[#6D5A8E] mt-6">{post.date}</p>
