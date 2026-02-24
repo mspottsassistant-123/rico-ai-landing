@@ -170,25 +170,19 @@ const skinTypePaths = [
   { title: "Dark Spots", hint: "Find gentler brightening options" },
 ];
 
-const missionFlow = [
+const clarityCards = [
   {
-    title: "Feel seen",
-    description: "You realize your skin isn’t ‘random’ — it’s reacting to ingredients you can now decode.",
+    title: "If your skin feels unpredictable",
+    description: "Scan one label and finally see what ingredients may be helping or hurting your skin.",
   },
   {
-    title: "Get clarity in 60 seconds",
-    description: "Download Rico AI on iOS, scan one label, and instantly see your Skin Safe Score.",
+    title: "If routines feel overwhelming",
+    description: "Start small: one scan, one clearer decision, one cleaner swap.",
   },
   {
-    title: "Stack tiny wins",
-    description: "Make one cleaner swap at a time and build the glow routine you can actually sustain.",
+    title: "If you want confidence while shopping",
+    description: "Use your Skin Safe Score to buy products with less guesswork and less stress.",
   },
-];
-
-const ceoQuestions = [
-  "Does this page make someone say: ‘this is exactly me’ in 5 seconds?",
-  "Does every section reduce fear and make the next action feel easy?",
-  "Does this move people toward trial intent, not just curiosity?",
 ];
 
 export default function Home() {
@@ -452,32 +446,32 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Mission flow */}
+        {/* Clarity section */}
         <section className="mt-16 rounded-[32px] border border-white/70 bg-white/80 px-6 py-10 shadow-sm sm:px-8">
-          <div className="max-w-4xl">
+          <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
-              How we think like Rico AI CEOs
+              Is Rico AI right for me?
             </p>
-            <h2 className="mt-2 text-3xl font-semibold">We use short-form to spark curiosity, then this page turns that emotion into a first scan.</h2>
+            <h2 className="mt-2 text-3xl font-semibold">If skincare feels confusing, this is where it gets easier.</h2>
             <p className="mt-3 text-[#2D4A3A]/75">
-              This is our brain-dump-to-execution framework: psychology first, clarity second, conversion always.
+              You don’t need a full routine reset today. Just scan one product and make one smarter choice.
             </p>
-            <div className="mt-4 grid gap-2 md:grid-cols-3">
-              {ceoQuestions.map((q) => (
-                <div key={q} className="rounded-xl border border-[#2D4A3A]/10 bg-white/85 px-3 py-2 text-xs font-medium text-[#2D4A3A]/80">
-                  {q}
-                </div>
-              ))}
-            </div>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {missionFlow.map((item, idx) => (
+            {clarityCards.map((item) => (
               <div key={item.title} className="rounded-2xl border border-[#2D4A3A]/10 bg-white/85 p-5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#2D4A3A]/60">Move {idx + 1}</p>
-                <h3 className="mt-2 text-base font-semibold text-[#2D4A3A]">{item.title}</h3>
+                <h3 className="text-base font-semibold text-[#2D4A3A]">{item.title}</h3>
                 <p className="mt-2 text-sm text-[#2D4A3A]/75">{item.description}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-6 flex justify-center">
+            <a
+              href={appStoreUrl}
+              className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
+            >
+              Download on App Store (iOS)
+            </a>
           </div>
         </section>
 
