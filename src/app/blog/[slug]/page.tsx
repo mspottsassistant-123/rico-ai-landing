@@ -13,7 +13,7 @@ function renderInline(text: string) {
     const idx = match.index;
     if (idx > 0) parts.push(remaining.slice(0, idx));
     parts.push(
-      <a key={`link-${i++}`} href={href} className="text-[#D4A574] underline">
+      <a key={`link-${i++}`} href={href} className="text-[#7A4AB9] underline">
         {label}
       </a>
     );
@@ -42,7 +42,7 @@ function renderBlocks(content: string) {
       );
     }
     return (
-      <p key={idx} className="text-white/80 leading-7 mt-4">
+      <p key={idx} className="text-[#4A3B63] leading-7 mt-4">
         {renderInline(trimmed)}
       </p>
     );
@@ -59,10 +59,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const post = posts.find((p) => p.slug === normalized);
   if (!post) {
     return (
-      <main className="min-h-screen bg-[#0B0B0F] text-white px-6 py-16">
+      <main className="min-h-screen px-6 py-16 text-[#2F2544] bg-[radial-gradient(900px_520px_at_90%_-10%,rgba(177,138,255,0.35),transparent_55%),radial-gradient(700px_420px_at_8%_8%,rgba(122,74,185,0.18),transparent_50%),linear-gradient(135deg,#F7F3E9_0%,#F3ECFA_55%,#EEE6F8_100%)]">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-2xl font-semibold">Post not found</h1>
-          <Link href="/blog" className="text-[#D4A574] inline-block mt-4">
+          <Link href="/blog" className="text-[#7A4AB9] inline-block mt-4 font-medium">
             ← Back to blog
           </Link>
         </div>
@@ -71,11 +71,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <main className="min-h-screen bg-[#0B0B0F] text-white px-6 py-16">
-      <div className="max-w-3xl mx-auto">
-        <Link href="/blog" className="text-[#D4A574]">← Back to blog</Link>
-        <p className="text-xs text-white/50 mt-6">{post.date}</p>
-        <h1 className="text-3xl md:text-5xl font-semibold mt-2">{post.title}</h1>
+    <main className="min-h-screen px-6 py-16 text-[#2F2544] bg-[radial-gradient(900px_520px_at_90%_-10%,rgba(177,138,255,0.35),transparent_55%),radial-gradient(700px_420px_at_8%_8%,rgba(122,74,185,0.18),transparent_50%),linear-gradient(135deg,#F7F3E9_0%,#F3ECFA_55%,#EEE6F8_100%)]">
+      <div className="max-w-3xl mx-auto rounded-2xl bg-white/72 border border-[#B18AFF]/35 shadow-[0_16px_38px_rgba(122,74,185,0.16)] p-6 md:p-10 backdrop-blur-sm">
+        <Link href="/blog" className="text-[#7A4AB9] font-medium">← Back to blog</Link>
+        <p className="text-xs text-[#6D5A8E] mt-6">{post.date}</p>
+        <h1 className="text-3xl md:text-5xl font-semibold mt-2 text-[#31224F]">{post.title}</h1>
         <div className="mt-6">{renderBlocks(post.content)}</div>
       </div>
     </main>
