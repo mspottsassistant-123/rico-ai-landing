@@ -23,10 +23,18 @@ function renderInline(text: string) {
   return parts;
 }
 
+function shouldSkipLine(trimmed: string) {
+  if (!trimmed) return true;
+  if (/^by\s+aranza\s+osorio/i.test(trimmed)) return true;
+  if (/download\s+rico\s+ai\s+on\s+the\s+app\s+store/i.test(trimmed)) return true;
+  if (/^with\s+love,?\s*zee$/i.test(trimmed)) return true;
+  return false;
+}
+
 function renderBlocks(content: string) {
   return content.split("\n").map((line, idx) => {
     const trimmed = line.trim();
-    if (!trimmed) return null;
+    if (shouldSkipLine(trimmed)) return null;
     if (trimmed.startsWith("## ")) {
       return (
         <h2 key={idx} className="text-2xl font-semibold mt-8 mb-2">
@@ -48,6 +56,25 @@ function renderBlocks(content: string) {
     );
   });
 }
+
+const CTA_BY_SLUG: Record<string, { line: string; button: string }> = {
+  "why-your-moisturizer-has-more-ingredients-than-dinner": {
+    line: "Before your next moisturizer checkout, do one scan and avoid hidden filler ingredients.",
+    button: "Scan your moisturizer now",
+  },
+  "the-hidden-truth-about-your-skincare-ingredients": {
+    line: "Turn ingredient confusion into confidence in seconds with one simple scan.",
+    button: "Get ingredient clarity",
+  },
+  "ingredient-breakdown-niacinamide": {
+    line: "Choose niacinamide formulas that support your barrier, not stress it.",
+    button: "Check your niacinamide",
+  },
+  "why-mineral-sunscreen-matters": {
+    line: "Protect your skin barrier daily with sunscreen choices you can trust.",
+    button: "Scan your SPF now",
+  },
+};
 
 export async function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -87,11 +114,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <div className="mt-6">{renderBlocks(post.content)}</div>
 
         <div className="mt-10 pt-6 border-t border-[#B18AFF]/30">
-          <p className="text-sm text-[#4A3B63]">
-            <strong>By Aranza Osorio</strong> — CEO, Expert Holistic Esthetician, IIN Health Coach, Nutritionist
+          <p className="text-xs uppercase tracking-wider text-[#7A4AB9]">Written by</p>
+          <p className="text-sm text-[#4A3B63] mt-1">
+            <strong>Aranza Osorio</strong> • CEO • Expert Holistic Esthetician • IIN Health Coach • Nutritionist
           </p>
           <p className="mt-3 text-sm text-[#4A3B63]">
-            If this gave you clarity, take the next step now: scan one product and choose with confidence.
+            {(CTA_BY_SLUG[post.slug]?.line) || "If this gave you clarity, take the next step now: scan one product and choose with confidence."}
           </p>
           <a
             href="https://bit.ly/4qO4Kc7"
@@ -99,7 +127,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             rel="noreferrer"
             className="inline-block mt-4 rounded-full border border-[#B18AFF] bg-[#F7F3E9] px-5 py-2 font-semibold text-[#7A4AB9]"
           >
-            Download Rico AI on the App Store
+            {(CTA_BY_SLUG[post.slug]?.button) || "Download Rico AI on the App Store"}
           </a>
         </div>
       </div>
