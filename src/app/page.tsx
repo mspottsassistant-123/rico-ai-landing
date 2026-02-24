@@ -157,6 +157,19 @@ const marqueeItems = [
   "🧠 AI‑Powered",
 ];
 
+const proofBadges = [
+  "⭐️ 4.8 average user love",
+  "🧾 Real ingredient label scans",
+  "👩🏽‍⚕️ Built by a licensed esthetician",
+];
+
+const skinTypePaths = [
+  { title: "Sensitive + Redness", hint: "Calm flare-ups with safer swaps" },
+  { title: "Acne-Prone", hint: "Spot pore-cloggers before breakouts" },
+  { title: "Dry Barrier", hint: "Protect your barrier, keep skin hydrated" },
+  { title: "Dark Spots", hint: "Find gentler brightening options" },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#F7F3E9] text-[#2D4A3A]">
@@ -209,10 +222,10 @@ export default function Home() {
               Rico AI skincare scanner
             </p>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl text-[#2D4A3A]">
-              Scan any skincare label. Get a clean‑to‑toxic score in seconds.
+              Scan your skincare label. Get your Skin Safe Score in 3 seconds.
             </h1>
             <p className="text-lg text-[#2D4A3A]/80">
-              Scan ingredients, avoid irritants, and get cleaner swaps — fast.
+              Download on iOS, scan any product, and instantly see what helps your skin vs what may trigger it.
             </p>
             <div className="grid gap-3 sm:grid-cols-3">
               {[
@@ -236,19 +249,44 @@ export default function Home() {
                 href={appStoreUrl}
                 className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
-                Download on iOS — Free 3‑Day Trial
+                Download on the App Store (iOS)
               </a>
               <a
                 href="#how"
                 className="glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
-                See how it works
+                See how Rico AI works
               </a>
             </div>
-            <div className="text-sm text-[#2D4A3A]/70">
-              <p>Esthetician‑built guidance</p>
-              <p>Budget‑friendly swaps (under ~$30 per product)</p>
-              <p>Less‑is‑more ingredients that actually work</p>
+            <p className="text-xs font-medium text-[#2D4A3A]/65">iPhone only • Free trial • Cancel anytime</p>
+
+            <div className="grid gap-2 sm:grid-cols-3">
+              {proofBadges.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-white/70 bg-white/75 px-3 py-2 text-xs font-semibold text-[#2D4A3A]/80 shadow-sm"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-[22px] border border-white/80 bg-white/75 p-4 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
+                Start with your skin goal
+              </p>
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                {skinTypePaths.map((item) => (
+                  <a
+                    key={item.title}
+                    href={appStoreUrl}
+                    className="rounded-xl border border-[#2D4A3A]/10 bg-white/80 px-3 py-2 text-left transition hover:border-[#9CAF88] hover:bg-white"
+                  >
+                    <p className="text-sm font-semibold text-[#2D4A3A]">{item.title}</p>
+                    <p className="text-xs text-[#2D4A3A]/70">{item.hint}</p>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
           <div className="relative">
@@ -264,6 +302,22 @@ export default function Home() {
                 priority
               />
             </div>
+          </div>
+        </section>
+
+        {/* 15-second proof strip */}
+        <section className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-white/80 bg-white/80 p-4 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#2D4A3A]/60">In 15 seconds</p>
+            <p className="mt-2 text-sm font-semibold text-[#2D4A3A]">Scan one product you already own.</p>
+          </div>
+          <div className="rounded-2xl border border-white/80 bg-white/80 p-4 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#2D4A3A]/60">You instantly get</p>
+            <p className="mt-2 text-sm font-semibold text-[#2D4A3A]">Skin Safe Score + ingredient clarity.</p>
+          </div>
+          <div className="rounded-2xl border border-white/80 bg-white/80 p-4 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#2D4A3A]/60">Then do this</p>
+            <p className="mt-2 text-sm font-semibold text-[#2D4A3A]">Swap to cleaner options and start your routine.</p>
           </div>
         </section>
 
@@ -305,7 +359,7 @@ export default function Home() {
               href={appStoreUrl}
               className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
-              Start your free trial
+              Try your first scan on iOS
             </a>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -516,20 +570,28 @@ export default function Home() {
                 tips, ingredient education, and updates from Zee.
               </p>
             </div>
-            <form className="flex flex-col gap-3 sm:flex-row">
-              <input
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                className="w-full rounded-full border border-black/10 bg-white/70 px-4 py-3 text-sm text-[#2D4A3A] outline-none"
-              />
-              <button
-                type="submit"
-                className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-[#2D4A3A]"
+            <div className="space-y-3">
+              <a
+                href={appStoreUrl}
+                className="neon-ring glass-button inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-[#2D4A3A]"
               >
-                Join the list
-              </button>
-            </form>
+                Download on App Store (iOS)
+              </a>
+              <form className="flex flex-col gap-3 sm:flex-row">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  className="w-full rounded-full border border-black/10 bg-white/70 px-4 py-3 text-sm text-[#2D4A3A] outline-none"
+                />
+                <button
+                  type="submit"
+                  className="glass-button inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-[#2D4A3A]"
+                >
+                  Not ready yet? Get tips
+                </button>
+              </form>
+            </div>
           </div>
         </section>
 
@@ -555,16 +617,20 @@ export default function Home() {
         <section id="download" className="mt-16 rounded-[36px] bg-gradient-to-br from-[#EAF4EE] via-[#F3E9FF] to-[#F6E8E0] px-6 py-10 text-center shadow-[0_30px_120px_-80px_rgba(156,175,136,0.5)] sm:px-8">
           <h2 className="text-3xl font-semibold">Ready for your glow‑up?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-[#2D4A3A]/75">
-            Your bathroom cabinet has products working against your skin right now.
-            Scan everything in 3 seconds. Get safety scores from a licensed
-            esthetician. Find cleaner alternatives under $30.
+            Start in under 60 seconds: download Rico AI on iOS, scan one product in your bathroom,
+            and get a Skin Safe Score + cleaner swaps you can buy right away.
           </p>
+          <div className="mx-auto mt-5 grid max-w-3xl gap-2 text-sm text-[#2D4A3A]/80 sm:grid-cols-3">
+            <p>1) Download on iOS</p>
+            <p>2) Scan your label</p>
+            <p>3) Follow your safer routine</p>
+          </div>
           <div className="mt-6 flex justify-center">
             <a
               href={appStoreUrl}
               className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
-I Want Glowy Skin
+Download Rico AI on App Store (iOS)
             </a>
           </div>
         </section>
@@ -574,10 +640,49 @@ I Want Glowy Skin
             <Image src="/images/swan-logo-sage.png" alt="Rico AI" width={24} height={24} />
             <span>Rico AI</span>
           </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <a href="https://bit.ly/rico-ig" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://bit.ly/rico-yt" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">YouTube</a>
-            <a href="https://bit.ly/rico-tt" className="hover:text-[#2D4A3A]" target="_blank" rel="noreferrer">TikTok</a>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="https://www.instagram.com/ricoai.app/"
+              className="inline-flex items-center gap-2 rounded-full border border-[#2D4A3A]/20 bg-white/70 px-3 py-1.5 text-[#2D4A3A] transition hover:scale-105 hover:bg-white"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram @ricoai.app"
+              title="Instagram @ricoai.app"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              <span className="text-xs font-semibold">Instagram</span>
+            </a>
+            <a
+              href="https://www.youtube.com/@RICO-AI-APP"
+              className="inline-flex items-center gap-2 rounded-full border border-[#2D4A3A]/20 bg-white/70 px-3 py-1.5 text-[#2D4A3A] transition hover:scale-105 hover:bg-white"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="YouTube Shorts @rico-ai-app"
+              title="YouTube Shorts @rico-ai-app"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                <path d="M21.6 7.2a2.9 2.9 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2C1.9 9 1.9 12 1.9 12s0 3 .5 4.8a2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2c.5-1.8.5-4.8.5-4.8s0-3-.5-4.8Z" />
+                <path d="M10 15.5V8.5l6 3.5-6 3.5Z" fill="#F7F3E9" />
+              </svg>
+              <span className="text-xs font-semibold">YouTube</span>
+            </a>
+            <a
+              href="https://www.tiktok.com/@ricoai_"
+              className="inline-flex items-center gap-2 rounded-full border border-[#2D4A3A]/20 bg-white/70 px-3 py-1.5 text-[#2D4A3A] transition hover:scale-105 hover:bg-white"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok @ricoai_"
+              title="TikTok @ricoai_"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                <path d="M14.5 3v10.1a3.6 3.6 0 1 1-2.6-3.5V7.3a6 6 0 1 0 5.1 5.9V8.9c1.1.9 2.4 1.4 3.8 1.5V7.7c-1.8-.2-3.4-1.2-4-2.7H14.5Z" />
+              </svg>
+              <span className="text-xs font-semibold">TikTok</span>
+            </a>
           </div>
           <p>Rico AI made with love 💜</p>
         </footer>
