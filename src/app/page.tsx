@@ -433,7 +433,7 @@ export default function Home() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-[28px] border border-[#C7E6D7] bg-gradient-to-br from-[#F8FFFC] to-[#DFF3E8] p-6 shadow-[0_20px_80px_-60px_rgba(140,188,165,0.75)]"
+                className="rounded-[28px] border border-[#D7E9E2] bg-gradient-to-br from-[#F2FCF7] via-[#EFEAFF] to-[#EAF8F1] p-6 shadow-[0_20px_80px_-60px_rgba(140,188,165,0.72)]"
               >
                 <h3 className="text-lg font-semibold">{feature.title}</h3>
                 <p className="mt-3 text-[#2D4A3A]/75">{feature.description}</p>
@@ -443,7 +443,7 @@ export default function Home() {
         </section>
 
         {/* Clarity section */}
-        <section className="mt-16 rounded-[32px] border border-[#C7E6D7] bg-gradient-to-br from-[#FBFFFD] to-[#E2F4EA] px-6 py-10 shadow-[0_18px_70px_-55px_rgba(140,188,165,0.55)] sm:px-8">
+        <section className="mt-16 rounded-[32px] border border-[#D7E9E2] bg-gradient-to-br from-[#F2FCF7] via-[#F1E9FF] to-[#F9EEF8] px-6 py-10 shadow-[0_18px_70px_-55px_rgba(140,188,165,0.58)] sm:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
               Is Rico AI right for me?
@@ -455,7 +455,7 @@ export default function Home() {
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {clarityCards.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-[#C7E6D7] bg-gradient-to-br from-[#FEFFFE] to-[#E6F6ED] p-5">
+              <div key={item.title} className="rounded-2xl border border-[#DCEBE4] bg-gradient-to-br from-[#FCFFFD] via-[#F4EEFF] to-[#ECF8F2] p-5">
                 <h3 className="text-base font-semibold text-[#2D4A3A]">{item.title}</h3>
                 <p className="mt-2 text-sm text-[#2D4A3A]/75">{item.description}</p>
               </div>
@@ -474,10 +474,27 @@ export default function Home() {
               Start your first scan (iOS)
             </a>
           </div>
+          <form action="/api/lead" method="post" className="mx-auto mt-4 grid max-w-xl gap-2 sm:grid-cols-3">
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Get Rico AI email tips"
+              className="sm:col-span-2 rounded-xl border border-[#C7E6D7] bg-white px-4 py-3 text-sm text-[#1F2A23] outline-none ring-[#9CAF88]/40 focus:ring"
+            />
+            <button
+              type="submit"
+              className="rounded-xl bg-[#2D4A3A] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#243b30]"
+            >
+              Join email list
+            </button>
+            <input type="hidden" name="source" value="ricoai-right-for-me" />
+            <input type="hidden" name="capturePoint" value="right-for-me" />
+          </form>
         </section>
 
         {/* Founder */}
-        <section id="founder" className="mt-16">
+        <section id="founder" className="mt-16 rounded-[32px] border border-[#DCE9E4] bg-gradient-to-br from-[#F4FFF9] via-[#F1ECFF] to-[#FFF3FA] p-6 shadow-[0_24px_90px_-70px_rgba(138,167,150,0.65)] sm:p-8">
           <div className="grid gap-8 rounded-[32px] border border-white/80 bg-white/80 p-8 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:items-start">
             <div className="relative overflow-hidden rounded-[24px]">
               <Image
@@ -757,6 +774,43 @@ export default function Home() {
           </div>
           <p className="text-base font-medium md:text-lg">Rico AI made with love 💜</p>
         </footer>
+        <section className="mt-14 rounded-[28px] border border-[#C7E6D7] bg-gradient-to-br from-[#FCFFFD] to-[#E7F7EF] p-6 sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#2D4A3A]/55">Get Rico AI updates</p>
+          <h3 className="mt-2 text-2xl font-semibold">Join the email glow list</h3>
+          <p className="mt-2 max-w-2xl text-sm text-[#2D4A3A]/75">
+            Weekly ingredient truths, safer-swap playbooks, and launch updates.
+          </p>
+
+          <form action="/api/lead" method="post" className="mt-5 grid gap-3 sm:grid-cols-4">
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="you@email.com"
+              className="sm:col-span-2 rounded-xl border border-[#C7E6D7] bg-white px-4 py-3 text-sm text-[#1F2A23] outline-none ring-[#9CAF88]/40 focus:ring"
+            />
+            <select
+              name="skinConcern"
+              defaultValue=""
+              className="rounded-xl border border-[#C7E6D7] bg-white px-4 py-3 text-sm text-[#1F2A23] outline-none ring-[#9CAF88]/40 focus:ring"
+            >
+              <option value="">Skin concern (optional)</option>
+              <option value="acne-prone">Acne-prone</option>
+              <option value="sensitive-redness">Sensitive/redness</option>
+              <option value="dry-barrier">Dry barrier</option>
+              <option value="hyperpigmentation">Dark spots</option>
+              <option value="combo-oily">Combo/oily</option>
+            </select>
+            <button
+              type="submit"
+              className="rounded-xl bg-[#2D4A3A] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#243b30]"
+            >
+              Join + get updates
+            </button>
+            <input type="hidden" name="source" value="ricoai-landing" />
+            <input type="hidden" name="capturePoint" value="footer-email-list" />
+          </form>
+        </section>
       </main>
     </div>
   );
