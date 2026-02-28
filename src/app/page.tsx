@@ -17,22 +17,22 @@ const features = [
   {
     title: "AI skincare ingredient scanner",
     description:
-      "Scan any label and get a clear clean‑to‑toxic score in seconds — no confusion, no rabbit holes.",
+      "Scan one label and instantly see what may help or hurt your skin.",
   },
   {
     title: "Esthetician‑approved swaps",
     description:
-      "Find under‑$30 essentials (cleanser, moisturizer, SPF) plus smarter upgrades when you want more.",
+      "Get cleaner options that fit your budget, starting with core essentials.",
   },
   {
     title: "Worldwide label translation",
     description:
-      "Decode products in multiple languages so you can shop confidently anywhere.",
+      "Decode ingredients across languages so you can shop with confidence anywhere.",
   },
   {
     title: "Sustainable habit tracking",
     description:
-      "Build streaks and stay consistent so your skin finally reflects your effort.",
+      "Build simple streaks so better skin becomes your normal, not a phase.",
   },
 ];
 
@@ -111,26 +111,26 @@ const blogPosts = [
   {
     title: "Why Your Moisturizer Has More Ingredients Than Dinner",
     link: "/blog/why-your-moisturizer-has-more-ingredients-than-dinner",
-    image: "https://www.ricoai.app/cdn/shop/articles/Frame_1948755304.jpg?v=1767736048",
+    image: "/images/blog-cards/hidden-truth.jpg",
     readTime: "2–3 min read",
   },
   {
     title: "The Hidden Truth About Skincare Ingredients (Less Is More)",
     link: "/blog/the-hidden-truth-about-your-skincare-ingredients",
-    image: "https://www.ricoai.app/cdn/shop/articles/Frame_1948755295.webp?v=1762276998",
+    image: "/images/blog-cards/clean-skincare.jpg",
     readTime: "2–3 min read",
   },
   {
     title: "Niacinamide: Why This Vitamin B3 Works for Every Skin Type",
     link: "/blog/ingredient-breakdown-niacinamide",
     image:
-      "https://www.ricoai.app/cdn/shop/articles/ingredient-breakdown-of-niacinamide-serum-closeup-ingredient-pretty-asthetic-ugc-style-vibes-beautiful-landscape-of-niacinamide-orgin_9cf4a5fe-1cd0-4ba4-b831-1c3403da4b59.png?v=1767740735",
+      "/images/blog-cards/niacinamide.jpg",
     readTime: "2–3 min read",
   },
   {
     title: "Why Mineral Sunscreen Matters (Badger Difference)",
     link: "/blog/why-mineral-sunscreen-matters",
-    image: "https://www.ricoai.app/cdn/shop/articles/badgers-sunscreen-in-summery-background.png?v=1767741051",
+    image: "/images/blog-cards/mineral-sunscreen.jpg",
     readTime: "2–3 min read",
   },
   {
@@ -173,15 +173,15 @@ const skinTypePaths = [
 const clarityCards = [
   {
     title: "If your skin feels unpredictable",
-    description: "Scan one label and finally see what ingredients may be helping or hurting your skin.",
+    description: "Scan one label and see what may be helping or hurting your skin.",
   },
   {
     title: "If routines feel overwhelming",
-    description: "Start small: one scan, one clearer decision, one cleaner swap.",
+    description: "Start small: one scan, one clearer choice.",
   },
   {
-    title: "If you want confidence while shopping",
-    description: "Use your Skin Safe Score to buy products with less guesswork and less stress.",
+    title: "If shopping feels risky",
+    description: "Check the label first so you can choose with less stress.",
   },
 ];
 
@@ -433,7 +433,7 @@ export default function Home() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-[28px] border border-white/80 bg-white/90 p-6 shadow-[0_20px_80px_-60px_rgba(156,175,136,0.6)]"
+                className="rounded-[28px] border border-[#C7E6D7] bg-gradient-to-br from-[#F8FFFC] to-[#DFF3E8] p-6 shadow-[0_20px_80px_-60px_rgba(140,188,165,0.75)]"
               >
                 <h3 className="text-lg font-semibold">{feature.title}</h3>
                 <p className="mt-3 text-[#2D4A3A]/75">{feature.description}</p>
@@ -443,30 +443,35 @@ export default function Home() {
         </section>
 
         {/* Clarity section */}
-        <section className="mt-16 rounded-[32px] border border-white/70 bg-white/80 px-6 py-10 shadow-sm sm:px-8">
+        <section className="mt-16 rounded-[32px] border border-[#C7E6D7] bg-gradient-to-br from-[#FBFFFD] to-[#E2F4EA] px-6 py-10 shadow-[0_18px_70px_-55px_rgba(140,188,165,0.55)] sm:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-[#2D4A3A]/60">
               Is Rico AI right for me?
             </p>
-            <h2 className="mt-2 text-3xl font-semibold">If skincare feels confusing, this is where it gets easier.</h2>
+            <h2 className="mt-2 text-3xl font-semibold">If skincare feels confusing, this gets easier fast.</h2>
             <p className="mt-3 text-[#2D4A3A]/75">
-              You don’t need a full routine reset today. Just scan one product and make one smarter choice.
+              No full routine reset needed. Scan one product and make one smarter choice today.
             </p>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {clarityCards.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-[#2D4A3A]/10 bg-white/85 p-5">
+              <div key={item.title} className="rounded-2xl border border-[#C7E6D7] bg-gradient-to-br from-[#FEFFFE] to-[#E6F6ED] p-5">
                 <h3 className="text-base font-semibold text-[#2D4A3A]">{item.title}</h3>
                 <p className="mt-2 text-sm text-[#2D4A3A]/75">{item.description}</p>
               </div>
             ))}
           </div>
-          <div className="mt-6 flex justify-center">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-medium text-[#2D4A3A]/75">
+            <span className="rounded-full border border-[#C7E6D7] bg-white/70 px-3 py-1">Esthetician-informed</span>
+            <span className="rounded-full border border-[#C7E6D7] bg-white/70 px-3 py-1">No guesswork</span>
+            <span className="rounded-full border border-[#C7E6D7] bg-white/70 px-3 py-1">Start with one scan</span>
+          </div>
+          <div className="mt-4 flex justify-center">
             <a
               href={appStoreUrl}
               className="neon-ring glass-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[#2D4A3A]"
             >
-              Download on App Store (iOS)
+              Start your first scan (iOS)
             </a>
           </div>
         </section>
