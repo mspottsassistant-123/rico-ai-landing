@@ -3,12 +3,12 @@ import { Menu } from 'lucide-react';
 import { trackEvent, getUTMLink } from '../utils/tracking';
 
 const SwanBadge = () => (
-  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-rico-border bg-white/95 shadow-sm overflow-hidden">
+  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-black shadow-sm overflow-hidden">
     <img
-      src="/images/swan-logo-sage.png"
+      src="/images/ricoai-swan.png"
       alt="Rico AI swan"
-      className="h-5 w-5 object-contain"
-      style={{ filter: 'brightness(0) saturate(100%)' }}
+      className="h-8 w-8 object-cover"
+      style={{ filter: 'brightness(0) invert(1)' }}
     />
   </span>
 );
