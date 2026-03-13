@@ -5,9 +5,9 @@ import { trackEvent, getUTMLink } from '../utils/tracking';
 const SwanBadge = () => (
   <span className="inline-flex h-9 w-9 items-center justify-center overflow-hidden">
     <img
-      src="/images/swan-logo.png"
+      src="/images/ricoai-swan.png"
       alt="Rico AI swan"
-      className="h-9 w-9 object-contain"
+      className="h-9 w-9 rounded-full object-cover"
     />
   </span>
 );
