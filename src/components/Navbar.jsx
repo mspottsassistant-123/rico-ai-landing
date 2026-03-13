@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Menu } from 'lucide-react';
 import { trackEvent, getUTMLink } from '../utils/tracking';
 
-const SwanBadge = () => (
-  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black shadow-sm overflow-hidden">
-    <img
-      src="/images/swan-logo-sage.png"
-      alt="Rico AI swan"
-      className="h-9 w-9 object-cover"
-      style={{ filter: 'brightness(0) invert(1) contrast(1.15)' }}
-    />
-  </span>
+const BrandMark = () => (
+  <img
+    src="/images/ricoai-logo.png"
+    alt="Rico AI"
+    className="h-8 w-auto object-contain"
+  />
 );
 
 const Navbar = () => {
@@ -30,11 +27,8 @@ const Navbar = () => {
           : 'bg-white/72 backdrop-blur-md border border-white/80 shadow-[0_12px_40px_-24px_rgba(45,74,58,0.55)]'
       }`}
     >
-      <div className="flex items-center gap-2 text-rico-primary">
-        <SwanBadge />
-        <div className="font-serif text-xl font-semibold tracking-wide flex-shrink-0">
-          Rico AI<span className="text-rico-accent">.</span>
-        </div>
+      <div className="flex items-center text-rico-primary">
+        <BrandMark />
       </div>
 
       <div className="hidden md:flex items-center gap-7 text-sm font-medium text-rico-text">

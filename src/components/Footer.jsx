@@ -2,15 +2,12 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { trackEvent, getUTMLink } from '../utils/tracking';
 
-const SwanBadge = () => (
-  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-black shadow-sm overflow-hidden">
-    <img
-      src="/images/swan-logo-sage.png"
-      alt="Rico AI swan"
-      className="h-8 w-8 object-cover"
-      style={{ filter: 'brightness(0) invert(1) contrast(1.15)' }}
-    />
-  </span>
+const BrandMark = () => (
+  <img
+    src="/images/ricoai-logo.png"
+    alt="Rico AI"
+    className="h-7 w-auto object-contain"
+  />
 );
 
 const Footer = () => {
@@ -49,9 +46,8 @@ const Footer = () => {
 
       <section className="mx-auto mt-10 mb-12 max-w-6xl px-6 md:px-8">
         <div className="flex flex-col items-center justify-between gap-5 md:flex-row text-sm text-rico-text">
-          <div className="flex items-center gap-2 font-medium text-rico-primary">
-            <SwanBadge />
-            <span className="font-serif text-base">Rico AI</span>
+          <div className="flex items-center font-medium text-rico-primary">
+            <BrandMark />
           </div>
           <div className="flex gap-6">
             <a href="https://www.instagram.com/ricoai.app/" target="_blank" rel="noopener noreferrer" className="hover:text-rico-primary">Instagram</a>
