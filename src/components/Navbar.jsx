@@ -3,10 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { trackEvent, getUTMLink } from '../utils/tracking';
 
-const SwanBadge = () => (
-  <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-[#F7F3E9]">
-    <img src="/swan-logo.png" alt="Rico AI Swan" className="w-7 h-7 object-contain" />
-  </div>
+const RicoLogo = () => (
+  <img src="/rico-ai-logo.svg" alt="Rico AI" className="h-8 w-auto object-contain" />
 );
 
 const Navbar = () => {
@@ -35,11 +33,8 @@ const Navbar = () => {
             : 'bg-white/72 backdrop-blur-md border border-white/80 shadow-[0_12px_40px_-24px_rgba(45,74,58,0.55)]'
         }`}
       >
-        <Link to="/" className="flex items-center gap-2 text-rico-primary hover:opacity-90 transition-opacity">
-          <SwanBadge />
-          <div className="font-serif text-xl font-semibold tracking-wide flex-shrink-0">
-            Rico AI<span className="text-rico-accent">.</span>
-          </div>
+        <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
+          <RicoLogo />
         </Link>
 
         <div className="hidden md:flex items-center gap-7 text-sm font-medium text-rico-text">
