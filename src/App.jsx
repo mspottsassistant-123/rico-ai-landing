@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -10,35 +11,61 @@ import MobileStickyCTA from './components/MobileStickyCTA';
 import FAQ from './components/FAQ';
 import ProofStrip from './components/ProofStrip';
 import ConcernLanes from './components/ConcernLanes';
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 import { trackEvent } from './utils/tracking';
 
-function App() {
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+}
 
+function HomePage() {
   useEffect(() => {
     trackEvent('landing_page_view', { origin: document.referrer });
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-rico-bg text-rico-primary font-sans">
-      {/* Global SVG Noise Overlay */}
-      <div className="noise-overlay"></div>
-
-      <Navbar />
-      <CookieBanner />
-
-      <main>
-        <Hero />
-        <ProofStrip />
-        <Features />
-        <ConcernLanes />
-        <Philosophy />
-        <Protocol />
-        <FAQ />
-      </main>
-
+    <>
+      <Hero />
+      <ProofStrip />
+      <Features />
+      <ConcernLanes />
+      <Philosophy />
+      <Protocol />
+      <FAQ />
       <MobileStickyCTA />
-      <Footer />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <div className="relative min-h-screen bg-rico-bg text-rico-primary font-sans">
+        {/* Global SVG Noise Overlay */}
+        <div className="noise-overlay"></div>
+
+        <Navbar />
+        <CookieBanner />
+
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

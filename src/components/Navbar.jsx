@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { trackEvent, getUTMLink } from '../utils/tracking';
 
@@ -12,6 +13,8 @@ const BrandMark = () => (
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isBlogPage = location.pathname.startsWith('/blog');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -27,15 +30,29 @@ const Navbar = () => {
           : 'bg-white/72 backdrop-blur-md border border-white/80 shadow-[0_12px_40px_-24px_rgba(45,74,58,0.55)]'
       }`}
     >
-      <div className="flex items-center text-rico-primary">
-        <BrandMark />
-      </div>
+      <Link to="/" className="flex items-center gap-2 text-rico-primary hover:opacity-90 transition-opacity">
+        <SwanBadge />
+        <div className="font-serif text-xl font-semibold tracking-wide flex-shrink-0">
+          Rico AI<span className="text-rico-accent">.</span>
+        </div>
+      </Link>
+
 
       <div className="hidden md:flex items-center gap-7 text-sm font-medium text-rico-text">
-        <a href="#features" className="hover:text-rico-primary transition-colors hover-lift">Features</a>
-        <a href="#concerns" className="hover:text-rico-primary transition-colors hover-lift">Skin concerns</a>
-        <a href="#philosophy" className="hover:text-rico-primary transition-colors hover-lift">Philosophy</a>
-        <a href="#protocol" className="hover:text-rico-primary transition-colors hover-lift">Protocol</a>
+        {isBlogPage ? (
+          <>
+            <Link to="/" className="hover:text-rico-primary transition-colors hover-lift">Home</Link>
+            <Link to="/blog" className="hover:text-rico-primary transition-colors hover-lift">Blog</Link>
+          </>
+        ) : (
+          <>
+            <a href="#features" className="hover:text-rico-primary transition-colors hover-lift">Features</a>
+            <a href="#concerns" className="hover:text-rico-primary transition-colors hover-lift">Skin concerns</a>
+            <a href="#philosophy" className="hover:text-rico-primary transition-colors hover-lift">Philosophy</a>
+            <a href="#protocol" className="hover:text-rico-primary transition-colors hover-lift">Protocol</a>
+            <Link to="/blog" className="hover:text-rico-primary transition-colors hover-lift">Blog</Link>
+          </>
+        )}
       </div>
 
       <a
