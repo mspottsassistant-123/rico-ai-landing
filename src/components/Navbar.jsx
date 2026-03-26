@@ -4,8 +4,8 @@ import { Menu, X } from 'lucide-react';
 import { trackEvent, getUTMLink } from '../utils/tracking';
 
 const SwanBadge = () => (
-  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#9CAF88] to-[#D4A574] flex items-center justify-center text-white font-bold text-sm">
-    R
+  <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-[#F7F3E9]">
+    <img src="/swan-logo.png" alt="Rico AI Swan" className="w-7 h-7 object-contain" />
   </div>
 );
 
