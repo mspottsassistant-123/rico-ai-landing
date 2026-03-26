@@ -1,7 +1,14 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
-import { ArrowLeft, Clock, User } from 'lucide-react';
+import { ArrowLeft, Clock, Apple } from 'lucide-react';
+
+// Category color mapping
+const categoryColors = {
+  'Ingredients': 'bg-[#9CAF88] text-white',
+  'Clean Beauty': 'bg-[#D4A574] text-white',
+  'Skin Types': 'bg-[#2D4A3A] text-white',
+};
 
 function BlogPost() {
   const { slug } = useParams();
@@ -10,6 +17,9 @@ function BlogPost() {
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
+
+  // Get related posts (other posts excluding current)
+  const relatedPosts = blogPosts.filter(p => p.slug !== slug).slice(0, 2);
 
   // Simple markdown-like rendering
   const renderContent = (content) => {
@@ -145,26 +155,35 @@ function BlogPost() {
   return (
     <div className="min-h-screen bg-rico-bg pt-20 pb-16">
       <article className="max-w-3xl mx-auto px-4">
-        {/* Back to Blog */}
+        {/* Back to Library */}
         <Link 
           to="/blog" 
-          className="inline-flex items-center gap-2 text-rico-primary hover:text-rico-sage transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-rico-primary/70 hover:text-rico-sage transition-colors mb-8 font-medium"
         >
           <ArrowLeft size={20} />
-          <span>Back to Blog</span>
+          <span>Back to Library</span>
         </Link>
 
         {/* Article Header */}
         <header className="mb-10">
+          {/* Category Tag */}
+          <div className="mb-4">
+            <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider ${categoryColors[post.category] || 'bg-rico-sage text-white'}`}>
+              {post.category}
+            </span>
+          </div>
+
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rico-primary mb-6 leading-tight">
             {post.title}
           </h1>
           
           <div className="flex flex-wrap items-center gap-4 text-sm text-rico-primary/70">
-            <div className="flex items-center gap-2">
-              <User size={16} />
-              <span>{post.author}</span>
+            <div className="flex items-center gap-1.5">
+              <Clock size={16} />
+              <span>{post.readTime}</span>
             </div>
+            <span>•</span>
+            <span className="font-medium">{post.author}</span>
             <span>•</span>
             <time dateTime={post.publishDate}>
               {new Date(post.publishDate).toLocaleDateString('en-US', {
@@ -173,11 +192,6 @@ function BlogPost() {
                 day: 'numeric'
               })}
             </time>
-            <span>•</span>
-            <div className="flex items-center gap-1">
-              <Clock size={16} />
-              <span>{post.readTime}</span>
-            </div>
           </div>
         </header>
 
@@ -186,47 +200,69 @@ function BlogPost() {
           {renderContent(post.content)}
         </div>
 
-        {/* Author Box */}
-        <div className="mt-12 p-6 bg-white rounded-2xl shadow-sm">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-rico-sage rounded-full flex items-center justify-center text-white text-2xl font-bold">
+        {/* Rico AI CTA Card */}
+        <div className="mt-12 p-8 bg-gradient-to-br from-[#9CAF88]/10 to-[#F7F3E9] rounded-3xl border-2 border-[#9CAF88]/20">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-rico-primary mb-3">
+              Ready to decode your skincare?
+            </h3>
+            <p className="text-rico-primary/80 mb-6 max-w-xl mx-auto">
+              Scan any product label with Rico AI and get instant ingredient analysis, safety scores, and personalized routine recommendations.
+            </p>
+            <a 
+              href="https://apps.apple.com/us/app/rico-ai/id6738859392"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-rico-primary text-white rounded-full font-semibold hover:bg-[#2D4A3A] transition-all duration-300 hover:shadow-lg hover:scale-105"
+            >
+              <Apple size={20} />
+              Download Rico AI Free
+            </a>
+          </div>
+        </div>
+
+        {/* Author Section */}
+        <div className="mt-12 p-8 bg-white rounded-3xl shadow-sm border border-rico-border">
+          <div className="flex items-start gap-6">
+            <div className="w-20 h-20 bg-gradient-to-br from-[#9CAF88] to-[#D4A574] rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
               A
             </div>
-            <div>
-              <h3 className="font-bold text-rico-primary mb-1">About the Author</h3>
-              <p className="text-rico-primary/80 text-sm mb-3">
-                Aranza Osorio is a licensed esthetician (CA/CO) and IIN-certified health coach. 
-                She founded Rico AI to help people decode skincare ingredient lists and find products 
-                that actually work for their skin.
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-rico-primary mb-2">About {post.author}</h3>
+              <p className="text-sm text-rico-primary/70 mb-3 font-medium">{post.authorCredentials}</p>
+              <p className="text-rico-primary/80 leading-relaxed">
+                Aranza founded Rico AI to help people decode skincare ingredient lists and find products that actually work for their skin. She combines evidence-based esthetician expertise with accessible technology to make clean, effective skincare simple.
               </p>
-              <a 
-                href="https://apps.apple.com/us/app/rico-ai/id6738859392"
-                className="inline-block px-5 py-2 bg-rico-sage text-white rounded-full text-sm font-medium hover:bg-rico-primary transition-colors"
-              >
-                Try Rico AI Free
-              </a>
             </div>
           </div>
         </div>
 
-        {/* More Articles */}
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold text-rico-primary mb-6">More Articles</h2>
-          <div className="grid gap-4">
-            {blogPosts.filter(p => p.slug !== slug).slice(0, 2).map((relatedPost) => (
-              <Link 
-                key={relatedPost.id}
-                to={`/blog/${relatedPost.slug}`}
-                className="block p-4 bg-white rounded-xl hover:shadow-md transition-shadow"
-              >
-                <h3 className="font-bold text-rico-primary hover:text-rico-sage transition-colors">
-                  {relatedPost.title}
-                </h3>
-                <p className="text-sm text-rico-primary/60 mt-1">{relatedPost.readTime}</p>
-              </Link>
-            ))}
+        {/* Related Posts */}
+        {relatedPosts.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-rico-primary mb-6">Continue Reading</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {relatedPosts.map((relatedPost) => (
+                <Link 
+                  key={relatedPost.id}
+                  to={`/blog/${relatedPost.slug}`}
+                  className="group block p-6 bg-white rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-[#9CAF88]/30"
+                >
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 ${categoryColors[relatedPost.category] || 'bg-rico-sage text-white'}`}>
+                    {relatedPost.category}
+                  </span>
+                  <h3 className="font-bold text-lg text-rico-primary group-hover:text-[#9CAF88] transition-colors mb-2 leading-snug">
+                    {relatedPost.title}
+                  </h3>
+                  <p className="text-sm text-rico-primary/60 flex items-center gap-1.5">
+                    <Clock size={14} />
+                    {relatedPost.readTime}
+                  </p>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </article>
     </div>
   );
