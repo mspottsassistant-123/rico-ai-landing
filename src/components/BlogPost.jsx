@@ -213,10 +213,13 @@ function BlogPost() {
               href="https://apps.apple.com/us/app/rico-ai/id6738859392"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-rico-primary text-white rounded-full font-semibold hover:bg-[#2D4A3A] transition-all duration-300 hover:shadow-lg hover:scale-105"
+              className="inline-block hover:scale-105 transition-transform duration-200"
             >
-              <Apple size={20} />
-              Download Rico AI Free
+              <img
+                src="/images/app-store-badge.png"
+                alt="Download on the App Store"
+                className="h-14 w-auto mx-auto"
+              />
             </a>
           </div>
         </div>
@@ -224,9 +227,11 @@ function BlogPost() {
         {/* Author Section */}
         <div className="mt-12 p-8 bg-white rounded-3xl shadow-sm border border-rico-border">
           <div className="flex items-start gap-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-[#9CAF88] to-[#D4A574] rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
-              A
-            </div>
+            <img
+              src="/images/founder-zee.jpg"
+              alt="Aranza Osorio"
+              className="w-20 h-20 rounded-full object-cover object-top flex-shrink-0 border-2 border-rico-border"
+            />
             <div className="flex-1">
               <h3 className="text-xl font-bold text-rico-primary mb-2">About {post.author}</h3>
               <p className="text-sm text-rico-primary/70 mb-3 font-medium">{post.authorCredentials}</p>

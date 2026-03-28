@@ -60,7 +60,7 @@ No more Reddit rabbit holes. Just scan, know, and glow.
 
 Take 30 seconds to scan your azelaic acid product with Rico AI. You might be surprised by what's in there.
 
-**👉 [Scan your products free — Download Rico AI](https://apps.apple.com/us/app/rico-ai/id6738859392)**`,
+👉 [Scan your products free — Download Rico AI](https://apps.apple.com/us/app/rico-ai/id6738859392)`,
   },
   {
     id: 'is-clean-beauty-actually-clean',
@@ -134,7 +134,7 @@ Because you deserve to know what you're putting on your face.
 
 Got a drawer full of "clean beauty" products? Scan them. You might be shocked by what's actually in there.
 
-**👉 [Scan your "clean" products free — Download Rico AI](https://apps.apple.com/us/app/rico-ai/id6738859392)**`,
+👉 [Scan your "clean" products free — Download Rico AI](https://apps.apple.com/us/app/rico-ai/id6738859392)`,
   },
   {
     id: 'your-skin-barrier-is-damaged',
@@ -234,6 +234,6 @@ Plus, you get a **Skin Safe Score (x/10)** and a **pre-vetted 3-product routine*
 
 If your skin is acting up, scan your routine. You might be using products that are silently breaking down your skin barrier.
 
-**👉 [Scan your routine for barrier disruptors — Download Rico AI](https://apps.apple.com/us/app/rico-ai/id6738859392)**`,
+👉 [Scan your routine for barrier disruptors — Download Rico AI](https://apps.apple.com/us/app/rico-ai/id6738859392)`,
   },
 ];
