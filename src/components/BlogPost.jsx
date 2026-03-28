@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
 import { ArrowLeft, Clock, Apple } from 'lucide-react';
+import { trackEvent, getUTMLink } from '../utils/tracking';
 
 // Category color mapping
 const categoryColors = {
@@ -81,13 +82,15 @@ function BlogPost() {
           if (beforeLink) {
             parts.push(<span key={key++}>{formatBoldItalic(beforeLink)}</span>);
           }
+          const isAppStore = linkMatch[2].includes('apps.apple.com');
           parts.push(
             <a 
               key={key++} 
-              href={linkMatch[2]} 
-              className="text-rico-sage hover:text-rico-primary underline transition-colors"
+              href={isAppStore ? getUTMLink('blog_inline_cta') : linkMatch[2]} 
+              className="text-rico-sage hover:text-rico-primary underline transition-colors font-semibold"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={isAppStore ? () => trackEvent('cta_click_app_store', { location: 'blog_inline', slug: post.slug }) : undefined}
             >
               {linkMatch[1]}
             </a>
@@ -210,9 +213,10 @@ function BlogPost() {
               Scan any product label with Rico AI and get instant ingredient analysis, safety scores, and personalized routine recommendations.
             </p>
             <a 
-              href="https://apps.apple.com/us/app/rico-ai/id6738859392"
+              href={getUTMLink('blog_cta')}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('cta_click_app_store', { location: 'blog_cta', slug: post.slug })}
               className="inline-block hover:scale-105 transition-transform duration-200"
             >
               <img
