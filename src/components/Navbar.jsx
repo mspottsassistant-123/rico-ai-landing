@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { trackEvent, getUTMLink } from '../utils/tracking';
 
 const RicoLogo = () => (
-  <img src="/rico-ai-logo.svg" alt="Rico AI" className="h-8 w-auto object-contain" />
+  <img src="/images/ricoai-logo.png" alt="Rico AI" className="h-7 w-auto object-contain" />
 );
 
 const Navbar = () => {
